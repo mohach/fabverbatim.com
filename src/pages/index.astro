@@ -40,7 +40,10 @@ import Footer from '../components/Footer.astro';
         <div class="portrait-anim-wrap">
           <div class="portrait-pulse"></div>
           <div class="portrait-ring">
-            <img src="/fabienne.png" alt="Fabienne Annys — Traductora Jurada" class="portrait"/>
+            <picture>
+              <source srcset="/fabienne.webp" type="image/webp">
+              <img src="/fabienne.png" alt="Fabienne Annys — Traductora Jurada" class="portrait"/>
+            </picture>
           </div>
         </div>
         <h2 class="hero-name">Fabienne Annys</h2>
@@ -142,7 +145,10 @@ import Footer from '../components/Footer.astro';
     <section class="about-preview">
       <div class="about-img-col reveal">
         <div class="about-frame">
-          <img src="/fabienne.png" alt="Fabienne Annys" class="about-photo"/>
+          <picture>
+            <source srcset="/fabienne.webp" type="image/webp">
+            <img src="/fabienne.png" alt="Fabienne Annys" class="about-photo"/>
+          </picture>
         </div>
         <div class="about-stats">
           <div class="astat"><span class="astat-n">30+</span><span class="astat-l">Años de exp.</span></div>
