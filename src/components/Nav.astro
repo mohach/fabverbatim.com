@@ -61,7 +61,7 @@ const langLinks = [
 
 <nav id="main-nav">
   <a href={lang === 'es' ? '/' : `/${lang}`} class="nav-logo" aria-label="Fab Verbatim">
-    <img src="/logo-simple.svg" alt="Fab Verbatim" class="nav-logo-img"/>
+    <img src="/logo-improved.svg" alt="Fab Verbatim" class="nav-logo-img"/>
   </a>
 
   <!-- Desktop nav -->
@@ -99,7 +99,7 @@ const langLinks = [
 <div class="mob-drawer" id="mob-drawer" aria-hidden="true">
   <div class="mob-drawer-inner">
     <div class="mob-drawer-header">
-      <img src="/logo-simple.svg" alt="Fab Verbatim" class="mob-logo"/>
+      <img src="/logo-improved.svg" alt="Fab Verbatim" class="mob-logo"/>
       <button class="mob-close" id="mob-close" aria-label="Close menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -160,7 +160,7 @@ const langLinks = [
   #main-nav.scrolled { box-shadow: 0 2px 28px rgba(13,28,82,0.1); }
 
   .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
-  .nav-logo-img { height: 52px; width: auto; object-fit: contain; }
+  .nav-logo-img { height: 46px; width: auto; object-fit: contain; }
 
   .nav-links { display: flex; align-items: center; gap: 0.1rem; list-style: none; }
   .nav-links > li { position: relative; }
@@ -263,7 +263,7 @@ const langLinks = [
     position: sticky; top: 0; z-index: 1;
     flex-shrink: 0;
   }
-  .mob-logo { height: 44px; width: auto; object-fit: contain; }
+  .mob-logo { height: 38px; width: auto; object-fit: contain; }
   .mob-close {
     background: none; border: none; cursor: pointer;
     color: var(--navy); padding: 4px;

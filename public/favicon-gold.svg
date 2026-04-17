@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Gold FV monogram for favicon -->
+  <!-- F -->
+  <rect x="4" y="4" width="2" height="24" fill="#c97d0a"/>
+  <rect x="4" y="4" width="16" height="2" fill="#c97d0a"/>
+  <rect x="4" y="16" width="12" height="2" fill="#c97d0a"/>
+  
+  <!-- V -->
+  <polygon points="22,4 26,24 30,4" fill="#c97d0a"/>
+</svg>

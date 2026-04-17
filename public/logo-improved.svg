@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <!-- Elegant FV monogram redesign -->
+  <!-- F - elegant design -->
+  <rect x="5" y="5" width="4" height="35" fill="#0d1c52"/>
+  <rect x="5" y="5" width="25" height="4" fill="#0d1c52"/>
+  <rect x="5" y="22" width="18" height="3" fill="#c97d0a"/>
+  
+  <!-- V - elegant design -->
+  <polygon points="35,5 45,35 55,5" fill="#c97d0a"/>
+  <rect x="35" y="40" width="20" height="3" fill="#c97d0a"/>
+  
+  <!-- Text: Fab Verbatim (smaller) -->
+  <text x="65" y="25" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="700" fill="#0d1c52">Fab</text>
+  <text x="65" y="45" font-family="'Playfair Display', Georgia, serif" font-size="16" font-weight="400" font-style="italic" fill="#c97d0a">Verbatim</text>
+</svg>
