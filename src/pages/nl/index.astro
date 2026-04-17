@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="nl" title="Fab Verbatim — Beëdigd Vertaler & Tolk | België · Spanje · Nederland">
+  <Nav lang="nl" currentPage="home"/>
+  <main>
+    <section class="hero-simple">
+      <div class="hs-left reveal">
+        <div class="hero-badge"><span class="badge-dot"></span>Beëdigd Vertaler · België · Spanje · Nederland</div>
+        <h1 class="hero-title">Meer dan een vertaler,<br/><em>een partner voor uw talige behoeften</em></h1>
+        <p class="hero-sub">Officiële vertalingen met legalisatie en apostille. Specialist in juridische, economisch-financiële, technische en gespecialiseerde vertaling in vijf talen.</p>
+        <div class="hero-langs"><span class="lang-tag">Spaans</span><span class="lang-tag">Catalaans</span><span class="lang-tag">Engels</span><span class="lang-tag">Frans</span><span class="lang-tag">Nederlands</span></div>
+        <div class="hero-actions">
+          <a href="/nl/contact" class="btn-primary">Offerte aanvragen →</a>
+          <a href="/nl/over-mij" class="btn-outline">Over mij</a>
+        </div>
+      </div>
+      <div class="hs-right reveal">
+        <div class="portrait-anim-wrap"><div class="portrait-pulse"></div><div class="portrait-ring"><img src="/fabienne.png" alt="Fabienne Annys" class="portrait"/></div></div>
+        <h2 class="hero-name">Fabienne Annys</h2>
+        <p class="hero-role">Beëdigd Vertaler & Tolk</p>
+        <ul class="hero-creds">
+          <li><span class="cd"></span>Beëdigd vertaler geregistreerd in België</li>
+          <li><span class="cd"></span>Beëdigd vertaler geregistreerd in Spanje</li>
+          <li><span class="cd"></span>Beëdigd vertaler geregistreerd in Nederland</li>
+          <li><span class="cd"></span>Meer dan 30 jaar professionele ervaring</li>
+        </ul>
+      </div>
+    </section>
+    <ContactForm lang="nl"/>
+  </main>
+  <Footer lang="nl"/>
+</Layout>
+<style>
+  .hero-simple { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; padding-top:68px; overflow:hidden; position:relative; }
+  .hero-simple::after { content:''; position:absolute; right:0; top:0; width:50%; height:100%; background:var(--navy); z-index:0; }
+  .hs-left { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:center; padding:4rem 3.5rem 4rem 4rem; }
+  .hs-right { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:4rem 3rem; text-align:center; }
+  .hero-badge { display:inline-flex; align-items:center; gap:0.6rem; border:1.5px solid var(--gold); background:var(--gold-bg); padding:0.4rem 1rem; font-size:0.68rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); width:fit-content; margin-bottom:2rem; }
+  .badge-dot { width:7px; height:7px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+  .hero-title { font-family:var(--serif); font-size:clamp(2.2rem,3.5vw,3.4rem); line-height:1.15; font-weight:700; color:var(--navy); margin-bottom:1.2rem; }
+  .hero-title em { font-style:italic; color:var(--gold); display:block; }
+  .hero-sub { font-size:1rem; font-weight:300; color:var(--muted); line-height:1.85; max-width:30rem; margin-bottom:1.8rem; }
+  .hero-langs { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2.2rem; }
+  .lang-tag { font-size:0.68rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; border:1px solid var(--border); padding:0.3rem 0.8rem; color:var(--navy); background:var(--white); }
+  .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+  .portrait-ring { width:220px; height:220px; border-radius:50%; border:3.5px solid var(--gold); overflow:hidden; margin-bottom:1.5rem; background:var(--navy-mid); flex-shrink:0; }
+  .portrait { width:100%; height:100%; object-fit:cover; object-position:top center; }
+  .hero-name { font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--white); margin-bottom:0.25rem; }
+  .hero-role { font-size:0.72rem; font-weight:400; letter-spacing:0.14em; text-transform:uppercase; color:rgba(232,160,32,0.8); margin-bottom:1.5rem; }
+  .hero-creds { list-style:none; display:flex; flex-direction:column; gap:0.5rem; text-align:left; max-width:260px; }
+  .hero-creds li { display:flex; align-items:flex-start; gap:0.65rem; font-size:0.8rem; font-weight:300; color:rgba(255,255,255,0.75); line-height:1.5; }
+  .cd { width:6px; height:6px; border-radius:50%; background:var(--gold); flex-shrink:0; margin-top:0.45rem; }
+  @media(max-width:900px) { .hero-simple { grid-template-columns:1fr; min-height:auto; } .hero-simple::after { display:none; } .hs-left { padding:5.5rem 1.5rem 3rem; } .hs-right { background:var(--navy); padding:3rem 1.5rem 4rem; } }
+</style>
+<script>const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*60); }); }, {threshold:0.07}); document.querySelectorAll('.reveal').forEach(el => obs.observe(el));</script>

@@ -1,0 +1,337 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout lang="es" title="Fab Verbatim — Traductora Jurada e Intérprete | Bélgica · España · Países Bajos">
+  <Nav lang="es" currentPage="home"/>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left reveal">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Traductora Jurada · Bélgica · España · Países Bajos
+        </div>
+        <h1 class="hero-title">
+          Más que una traductora,<br/>
+          <em>tu socia para tus necesidades lingüísticas</em>
+        </h1>
+        <p class="hero-sub">
+          Traducciones oficiales con legalización y apostilla. Especialista en traducción jurídica, económico-financiera, técnica y especializada en cinco idiomas.
+        </p>
+        <div class="hero-langs">
+          <span class="lang-tag">Español</span>
+          <span class="lang-tag">Catalán</span>
+          <span class="lang-tag">Inglés</span>
+          <span class="lang-tag">Francés</span>
+          <span class="lang-tag">Neerlandés</span>
+        </div>
+        <div class="hero-actions">
+          <a href="/contacto" class="btn-primary">Pedir presupuesto →</a>
+          <a href="/traducciones-juradas" class="btn-outline">Ver servicios</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="portrait-anim-wrap">
+          <div class="portrait-pulse"></div>
+          <div class="portrait-ring">
+            <img src="/fabienne.png" alt="Fabienne Annys — Traductora Jurada" class="portrait"/>
+          </div>
+        </div>
+        <h2 class="hero-name">Fabienne Annys</h2>
+        <p class="hero-role">Traductora Jurada & Intérprete</p>
+        <ul class="hero-creds">
+          <li><span class="cd"></span>Traductora jurada inscrita en Bélgica</li>
+          <li><span class="cd"></span>Traductora jurada inscrita en España</li>
+          <li><span class="cd"></span>Traductora jurada inscrita en los Países Bajos</li>
+          <li><span class="cd"></span>Más de 30 años de experiencia profesional</li>
+        </ul>
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/fab-verbatim-b005ab268/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:contact@fabverbatim.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="tel:+34630573445" aria-label="Teléfono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 5.25 5.25l1.13-1.34a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 13.92z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Firma digital certificada (BE, desde 2022)</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>Apostilla y legalización</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Más de 30 años de experiencia</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg><span>TSJC · Gobierno Federal Belga</span></div>
+    </div>
+
+    <!-- SERVICES OVERVIEW -->
+    <section class="services-overview">
+      <div class="services-overview-header reveal">
+        <div>
+          <p class="eyebrow">Lo que ofrezco</p>
+          <h2 class="section-title">Servicios de<br/><em>traducción especializada</em></h2>
+        </div>
+        <a href="/contacto" class="btn-primary">Pedir presupuesto →</a>
+      </div>
+      <div class="svc-grid">
+        <a href="/traducciones-juradas" class="svc-card reveal">
+          <div class="svc-num">01</div>
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Traducciones Juradas" class="svc-img" loading="lazy"/>
+          <div class="svc-body">
+            <div class="svc-name">Traducciones Juradas</div>
+            <p class="svc-desc">Certificados de nacimiento, contratos matrimoniales, títulos académicos y documentos oficiales con plena validez legal.</p>
+            <span class="svc-link">Saber más →</span>
+          </div>
+        </a>
+        <a href="/traducciones-juridicas" class="svc-card reveal">
+          <div class="svc-num">02</div>
+          <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=600&q=80" alt="Traducciones Jurídicas" class="svc-img" loading="lazy"/>
+          <div class="svc-body">
+            <div class="svc-name">Traducciones Jurídicas</div>
+            <p class="svc-desc">Contratos, escrituras, sentencias, leyes y poderes notariales con más de 30 años de experiencia en derecho.</p>
+            <span class="svc-link">Saber más →</span>
+          </div>
+        </a>
+        <a href="/traducciones-economico-financieras" class="svc-card reveal">
+          <div class="svc-num">03</div>
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Traducciones Económico-Financieras" class="svc-img" loading="lazy"/>
+          <div class="svc-body">
+            <div class="svc-name">Económico-Financieras</div>
+            <p class="svc-desc">Informes financieros, balances, contratos financieros y análisis económicos con terminología especializada.</p>
+            <span class="svc-link">Saber más →</span>
+          </div>
+        </a>
+        <a href="/traducciones-comercio-exterior" class="svc-card reveal">
+          <div class="svc-num">04</div>
+          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80" alt="Comercio Exterior" class="svc-img" loading="lazy"/>
+          <div class="svc-body">
+            <div class="svc-name">Comercio Exterior</div>
+            <p class="svc-desc">Contratos internacionales, documentos aduaneros y documentación de importación y exportación.</p>
+            <span class="svc-link">Saber más →</span>
+          </div>
+        </a>
+        <a href="/traducciones-tecnicas" class="svc-card reveal">
+          <div class="svc-num">05</div>
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80" alt="Traducciones Técnicas" class="svc-img" loading="lazy"/>
+          <div class="svc-body">
+            <div class="svc-name">Traducciones Técnicas</div>
+            <p class="svc-desc">Manuales de instrucciones, licitaciones y especificaciones técnicas. 30+ años con fabricantes de maquinaria industrial.</p>
+            <span class="svc-link">Saber más →</span>
+          </div>
+        </a>
+        <div class="svc-card svc-card--cta reveal">
+          <div class="svc-cta-inner">
+            <p class="svc-cta-title">¿No sabes qué servicio necesitas?</p>
+            <p class="svc-cta-text">Contáctame y te asesoraré sobre la mejor opción para tu documento y país de destino.</p>
+            <a href="/contacto" class="btn-gold">Contactarme →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about-preview">
+      <div class="about-img-col reveal">
+        <div class="about-frame">
+          <img src="/fabienne.png" alt="Fabienne Annys" class="about-photo"/>
+        </div>
+        <div class="about-stats">
+          <div class="astat"><span class="astat-n">30+</span><span class="astat-l">Años de exp.</span></div>
+          <div class="astat-div"></div>
+          <div class="astat"><span class="astat-n">3</span><span class="astat-l">Países</span></div>
+          <div class="astat-div"></div>
+          <div class="astat"><span class="astat-n">5</span><span class="astat-l">Idiomas</span></div>
+        </div>
+      </div>
+      <div class="about-text-col reveal">
+        <p class="eyebrow">Sobre Fabienne</p>
+        <h2 class="section-title">Traductora jurada<br/><em>en quien confiar</em></h2>
+        <p class="about-p">Los idiomas han sido mi gran pasión desde pequeña, lo que me ha llevado a explorar el mundo y adentrarme en diferentes culturas. A través de esta pasión, me convertí en traductora jurada. Hoy, con más de 30 años de experiencia y con acreditación en Bélgica, España y los Países Bajos para cinco idiomas, asumo la importante responsabilidad de garantizar la exactitud y coherencia de cada traducción que produzco.</p>
+        <p class="about-p">Soy traductora jurada e intérprete, inscrita en el registro de traductores jurados en Bélgica, España y los Países Bajos. Ofrezco traducciones de documentos oficiales con legalización y apostilla al español, inglés, francés, neerlandés y catalán.</p>
+        <div class="about-values">
+          <div class="av"><div class="av-dot"></div><div><strong>Calidad</strong><br/>Cada traducción revisada con precisión.</div></div>
+          <div class="av"><div class="av-dot"></div><div><strong>Compromiso</strong><br/>Tu proyecto, mi prioridad.</div></div>
+          <div class="av"><div class="av-dot"></div><div><strong>Precisión</strong><br/>Terminología exacta en todos los idiomas.</div></div>
+          <div class="av"><div class="av-dot"></div><div><strong>Confidencialidad</strong><br/>Tus documentos, siempre seguros.</div></div>
+        </div>
+        <a href="/sobre-mi" class="btn-primary" style="margin-top:2rem">Conocer más →</a>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+      <div class="reviews-header reveal">
+        <p class="eyebrow" style="justify-content:center">Opiniones de clientes</p>
+        <h2 class="section-title" style="text-align:center">Lo que dicen<br/><em>sobre Fabienne</em></h2>
+        <div class="rating-row">
+          <div class="stars">★★★★★</div>
+          <span>5.0 · Google Reviews</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        {[
+          { author: 'Patrick', text: 'Necesitaba una traducción de última hora del español al inglés con un requisito específico para los Países Bajos. Fabienne no solo gestionó el trabajo con una profesionalidad impecable, sino que también me ofreció excelentes consejos. La traducción fue aceptada sin el más mínimo problema. ¡Mil gracias!' },
+          { author: '木村梟', text: 'She was very quick in responding and her work was professional. I\'m very satisfied with her!' },
+          { author: 'Silvana Rey', text: 'Excelente profesional y trato exquisito. Totalmente recomendable.' },
+          { author: 'Kike Balles', text: 'Estupendo trabajo, exquisito trato, muy profesional.' },
+          { author: 'Baker El Muhur', text: 'Service fiable, rapide et une communication parfaite. Encore merci!' },
+          { author: 'Natalia Morales', text: 'Muy amable, profesional y eficaz. Sin duda una muy buena experiencia.' },
+        ].map(r => (
+          <article class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"{r.text}"</p>
+            <footer class="review-footer">
+              <span class="review-author">{r.author}</span>
+              <span class="review-src"><span class="g-dot"></span> Google</span>
+            </footer>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <ContactForm lang="es"/>
+  </main>
+  <Footer lang="es"/>
+</Layout>
+
+<style>
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 68px; overflow: hidden; position: relative; }
+  .hero::after { content: ''; position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: var(--navy); z-index: 0; }
+  .hero-left { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; padding: 4rem 3.5rem 4rem 4rem; background: var(--offwhite); }
+  .hero-right { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 3rem; text-align: center; }
+
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.6rem; border: 1.5px solid var(--gold); background: var(--gold-bg); padding: 0.4rem 1rem; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); width: fit-content; margin-bottom: 2rem; }
+  .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 3.5vw, 3.4rem); line-height: 1.15; font-weight: 700; color: var(--navy); margin-bottom: 1.2rem; }
+  .hero-title em { font-style: italic; color: var(--gold); display: block; }
+  .hero-sub { font-size: 1rem; font-weight: 300; color: var(--muted); line-height: 1.85; max-width: 30rem; margin-bottom: 1.8rem; }
+  .hero-langs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+  .lang-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--border); padding: 0.3rem 0.8rem; color: var(--navy); background: var(--white); }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .portrait-anim-wrap { position:relative; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem; }
+  .portrait-pulse { position:absolute; width:260px; height:260px; border-radius:50%; border:2px solid rgba(201,125,10,0.4); animation:pulse-ring 2.8s ease-out infinite; pointer-events:none; }
+  .portrait-pulse::after { content:''; position:absolute; inset:-14px; border-radius:50%; border:1.5px solid rgba(201,125,10,0.18); animation:pulse-ring 2.8s ease-out 0.7s infinite; }
+  @keyframes pulse-ring { 0%{transform:scale(0.95);opacity:0.8} 70%{transform:scale(1.06);opacity:0.1} 100%{transform:scale(1.08);opacity:0} }
+  .portrait-ring { width:230px; height:230px; border-radius:50%; border:3.5px solid var(--gold); overflow:hidden; background:var(--navy-mid); flex-shrink:0; position:relative; z-index:1; animation:float 4s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .portrait { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .hero-name { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+  .hero-role { font-size: 0.74rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(232,160,32,0.8); margin-bottom: 1.5rem; }
+  .hero-creds { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; text-align: left; max-width: 270px; }
+  .hero-creds li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.8rem; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.5; }
+  .cd { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 0.45rem; }
+  .hero-social { display: flex; gap: 0.9rem; margin-top: 1.8rem; }
+  .hero-social a { width: 36px; height: 36px; border: 1px solid rgba(201,125,10,0.35); display: flex; align-items: center; justify-content: center; color: var(--gold); transition: all 0.2s; border-radius: 3px; }
+  .hero-social a:hover { background: var(--gold); color: var(--white); }
+
+  /* TRUST STRIP */
+  .trust-strip { background: var(--navy); padding: 1.4rem 4rem; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 0.7rem; font-size: 0.73rem; font-weight: 400; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.82); }
+  .trust-item svg { color: var(--gold); flex-shrink: 0; }
+
+  /* SERVICES */
+  .services-overview { background: var(--blue-tint); padding: 6rem 4rem; }
+  .services-overview-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: rgba(13,28,82,0.1); border: 1px solid rgba(13,28,82,0.1); }
+  .svc-card { background: var(--white); display: flex; flex-direction: column; position: relative; overflow: hidden; transition: box-shadow 0.25s; text-decoration: none; color: inherit; }
+  .svc-card:hover { box-shadow: 0 4px 24px rgba(13,28,82,0.1); z-index: 1; }
+  .svc-card::after { content: ''; position: absolute; bottom: 0; left: 0; height: 3px; width: 0; background: var(--gold); transition: width 0.4s ease; }
+  .svc-card:hover::after { width: 100%; }
+  .svc-num { position: absolute; top: 1rem; left: 1rem; font-family: var(--serif); font-size: 0.75rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; z-index: 1; }
+  .svc-img { width: 100%; height: 180px; object-fit: cover; }
+  .svc-body { padding: 1.5rem 1.5rem 2rem; flex: 1; display: flex; flex-direction: column; }
+  .svc-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 0.7rem; }
+  .svc-desc { font-size: 0.84rem; font-weight: 300; color: var(--muted); line-height: 1.8; flex: 1; margin-bottom: 1.2rem; }
+  .svc-link { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s, gap 0.2s; margin-top: auto; }
+  .svc-card:hover .svc-link { color: var(--gold); gap: 0.8rem; }
+  .svc-card--cta { background: var(--navy) !important; display: flex; align-items: center; justify-content: center; min-height: 320px; }
+  .svc-cta-inner { padding: 2.5rem; text-align: center; }
+  .svc-cta-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--white); margin-bottom: 0.8rem; line-height: 1.4; }
+  .svc-cta-text { font-size: 0.85rem; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 1.8rem; }
+
+  /* ABOUT PREVIEW */
+  .about-preview { background: var(--white); padding: 6rem 4rem; display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: center; }
+  .about-img-col { position: relative; }
+  .about-frame { position: relative; aspect-ratio: 4/5; background: var(--navy); overflow: hidden; }
+  .about-frame::before { content: ''; position: absolute; top: -14px; right: -14px; width: 100%; height: 100%; border: 2px solid var(--gold); z-index: 0; }
+  .about-photo { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .about-stats { position: absolute; bottom: -1.2rem; left: -1.2rem; background: var(--white); border: 1px solid var(--border); box-shadow: 0 8px 28px rgba(0,0,0,0.08); padding: 1rem 1.3rem; display: flex; gap: 1.3rem; align-items: center; z-index: 2; }
+  .astat { display: flex; flex-direction: column; align-items: center; }
+  .astat-n { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+  .astat-l { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+  .astat-div { width: 1px; height: 32px; background: var(--border); }
+  .about-p { font-size: 0.97rem; font-weight: 300; color: #2a2a2a; line-height: 1.9; margin-bottom: 1rem; }
+  .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.8rem; }
+  .av { display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.83rem; font-weight: 300; color: var(--muted); line-height: 1.6; }
+  .av strong { font-weight: 600; color: var(--navy); display: block; margin-bottom: 0.15rem; }
+  .av-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 0.35rem; }
+
+  /* REVIEWS */
+  .reviews-section { background: var(--blue-tint); padding: 6rem 4rem; }
+  .reviews-header { text-align: center; margin-bottom: 3rem; }
+  .rating-row { display: flex; align-items: center; justify-content: center; gap: 0.7rem; margin-top: 0.8rem; font-size: 0.78rem; font-weight: 500; color: var(--muted); }
+  .stars { font-size: 1.1rem; color: var(--gold); letter-spacing: 2px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+  .review-card { background: var(--white); border: 1.5px solid var(--border); padding: 1.8rem; display: flex; flex-direction: column; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+  .review-card:hover { border-color: var(--gold); box-shadow: 0 8px 28px rgba(201,125,10,0.1); transform: translateY(-2px); }
+  .review-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 0.9rem; }
+  .review-text { font-size: 0.87rem; font-weight: 300; line-height: 1.8; color: #333; font-style: italic; flex: 1; margin-bottom: 1.2rem; }
+  .review-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+  .review-author { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; color: var(--navy); }
+  .review-src { display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: var(--muted); }
+  .g-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4285f4; }
+
+  @media (max-width: 1024px) {
+    .services-overview { padding: 4rem 1.2rem; }
+    .svc-grid { grid-template-columns: 1fr 1fr; }
+    .reviews-grid { grid-template-columns: 1fr 1fr; }
+    .trust-strip { padding: 1.2rem 1.2rem; gap: 1.2rem; flex-wrap: wrap; }
+  }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero::after { display: none; }
+    .hero-left { padding: 5.5rem 1.2rem 2.5rem; }
+    .hero-right { background: var(--navy); padding: 2.5rem 1.2rem 3.5rem; }
+    .about-preview { grid-template-columns: 1fr; padding: 3rem 1.2rem; gap: 2rem; }
+    .about-img-col { display: none; }
+    .reviews-section { padding: 3.5rem 1.2rem; }
+    .reviews-header { margin-bottom: 2rem; }
+    .services-overview-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .svc-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .about-values { grid-template-columns: 1fr; }
+    .hero-title { font-size: 1.9rem; }
+    .hero-sub { font-size: 0.92rem; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions a { text-align: center; justify-content: center; }
+    .trust-strip { gap: 0.8rem; }
+    .trust-item { font-size: 0.65rem; }
+    .portrait-ring { width: 190px; height: 190px; }
+    .portrait-pulse { width: 215px; height: 215px; }
+    .hero-creds { max-width: 100%; }
+    .svc-card--cta { min-height: 260px; }
+    .services-overview { padding: 3rem 1.2rem; }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 60);
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

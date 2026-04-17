@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="ca" title="Traduccions Econòmiques i Financeres — Fab Verbatim" description="Traduccions especialitzades d'informes financers, balanços i documents econòmics per a empreses i inversors.">
+  <Nav lang="ca" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Serveis</p><h1>Traduccions Econòmiques i Financeres</h1><p>Traduccions especialitzades d'informes financers, balanços, prospectes d'inversió i documents econòmics clau.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80" alt="Traduccions Econòmiques" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Què són les traduccions economicofinanceres?</h2>
+        <p class="faq-a">Les traduccions economicofinanceres fan referència al procés de traslladar textos relacionats amb assumptes econòmics i financers d'un idioma a un altre. Aquests textos poden incloure informes financers, balanços, estats financers, anàlisis econòmics, documents comptables, contractes financers i altres materials relacionats amb l'àmbit econòmic i financer.<br/><br/>La traducció en aquest context requereix no només sòlides competències lingüístiques, sinó també un coneixement especialitzat de la terminologia específica de l'economia i les finances en tots dos idiomes.</p>
+        <div class="lang-badges">
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Neerlandès</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Francès</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Català</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Espanyol</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Anglès</div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">Per a què serveixen les traduccions economicofinanceres?</h2><p class="faq-a">El propòsit és permetre la comprensió i l'intercanvi d'informació relacionada amb assumptes econòmics i financers entre persones, empreses o entitats que parlen idiomes diferents. Aquestes traduccions permeten a les parts accedir a informes financers, contractes i anàlisis econòmics en el seu propi idioma, facilitant la presa de decisions informades i el compliment de requisits legals en contextos internacionals.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Quant costa una traducció financera?</h2><p class="faq-a">El preu pot variar en funció del nivell de dificultat del text, el volum del document, el termini urgent i el parell d'idiomes. Els documents financers i econòmics solen contenir terminologia especialitzada i dades tècniques que poden afectar el temps i l'esforç necessaris. Contacteu per obtenir un pressupost a mida.</p></div></div>
+    <ContactForm lang="ca"/>
+  </main>
+  <Footer lang="ca"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

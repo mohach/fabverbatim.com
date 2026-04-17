@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout lang="es" title="Sobre mí — Fab Verbatim | Traductora Jurada" description="Conoce a Fabienne Annys, traductora jurada e intérprete con más de 30 años de experiencia, inscrita en Bélgica, España y los Países Bajos.">
+  <Nav lang="es" currentPage="about"/>
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-inner reveal">
+        <p class="eyebrow eyebrow--light">Fab Verbatim</p>
+        <h1>Traductora jurada y técnica<br/>— Español · Catalán · Inglés · Neerlandés · Francés</h1>
+        <p>Apasionada de los idiomas desde pequeña, con más de 30 años de experiencia y acreditación en tres países.</p>
+      </div>
+    </div>
+
+    <!-- PROFILE SECTION -->
+    <section class="profile-section">
+      <div class="profile-img-col reveal">
+        <div class="profile-frame">
+          <img src="/fabienne.png" alt="Fabienne Annys — Traductora Jurada" class="profile-photo"/>
+        </div>
+        <div class="profile-badges">
+          <div class="pbadge"><div class="pbadge-dot"></div>Traductora Jurada en Bélgica</div>
+          <div class="pbadge"><div class="pbadge-dot"></div>Traductora Jurada en España</div>
+          <div class="pbadge"><div class="pbadge-dot"></div>Traductora Jurada en los Países Bajos</div>
+        </div>
+        <div class="profile-contact-links">
+          <a href="mailto:contact@fabverbatim.com">contact@fabverbatim.com</a>
+          <a href="tel:+34630573445">+34 630 573 445</a>
+          <a href="https://www.linkedin.com/in/fab-verbatim-b005ab268/" target="_blank" rel="noopener">LinkedIn →</a>
+        </div>
+      </div>
+
+      <div class="profile-text-col reveal">
+        <p class="eyebrow">Mi historia</p>
+        <h2 class="section-title">FAB VERBATIM</h2>
+
+        <p class="profile-p">Los idiomas han sido mi gran pasión desde pequeña, lo que me ha llevado a explorar el mundo y adentrarme en diferentes culturas. A través de esta pasión, me convertí en traductora jurada. Hoy, con más de 30 años de experiencia y con acreditación en Bélgica, España y los Países Bajos para cinco idiomas, asumo la importante responsabilidad de garantizar la exactitud y coherencia de cada traducción que produzco.</p>
+
+        <p class="profile-p">Para mí, cada día representa una nueva aventura lingüística y cultural, lo que me compromete a seguir explorando, cultivando y mejorando mis habilidades de traducción con el fin de ofrecer traducciones precisas y de calidad.</p>
+
+        <p class="profile-p">Soy traductora jurada e intérprete, inscrita en el registro de traductores jurados de Bélgica, España y los Países Bajos. Ofrezco traducciones de documentos oficiales con legalización y apostilla al español, inglés, francés, neerlandés y catalán. Cuento con experiencia en traducción jurídica, económico-financiera, técnica y especializada dentro del sector de maquinaria industrial.</p>
+
+        <div class="profile-stats">
+          <div class="pstat"><span class="pstat-n">30+</span><span class="pstat-l">Años de experiencia</span></div>
+          <div class="pstat"><span class="pstat-n">5</span><span class="pstat-l">Idiomas</span></div>
+          <div class="pstat"><span class="pstat-n">3</span><span class="pstat-l">Países acreditada</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALISATION -->
+    <section class="spec-section">
+      <div class="spec-text reveal">
+        <p class="eyebrow">Especialización</p>
+        <h2 class="section-title">Traducción<br/><em>especializada</em></h2>
+        <p class="spec-p">Mi experiencia como traductora cualificada y certificada en comercio exterior, así como mi especialización en la traducción de manuales técnicos, me permite cubrir una amplia gama de necesidades. Combinando rigor lingüístico con un profundo conocimiento del sector, garantizo traducciones de la más alta calidad en cada proyecto.</p>
+        <a href="/contacto" class="btn-primary" style="margin-top:2rem">Pedir presupuesto →</a>
+      </div>
+      <div class="spec-cards reveal">
+        <a href="/traducciones-juridicas" class="spec-card">
+          <div class="spec-icon">⚖️</div>
+          <div class="spec-name">Traducciones Jurídicas</div>
+          <p class="spec-desc">+30 años trabajando con el TSJC, abogados y el Gobierno Federal Belga.</p>
+        </a>
+        <a href="/traducciones-economico-financieras" class="spec-card">
+          <div class="spec-icon">📊</div>
+          <div class="spec-name">Económico-Financieras</div>
+          <p class="spec-desc">Informes financieros, balances y análisis económicos con terminología precisa.</p>
+        </a>
+        <a href="/traducciones-comercio-exterior" class="spec-card">
+          <div class="spec-icon">🌍</div>
+          <div class="spec-name">Comercio Exterior</div>
+          <p class="spec-desc">Técnica certificada por la Generalitat de Catalunya en comercio exterior.</p>
+        </a>
+        <a href="/traducciones-tecnicas" class="spec-card">
+          <div class="spec-icon">⚙️</div>
+          <div class="spec-name">Traducciones Técnicas</div>
+          <p class="spec-desc">+30 años con fabricantes de maquinaria industrial. Manuales y especificaciones.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-about">
+      <div class="va-header reveal">
+        <p class="eyebrow eyebrow--light" style="justify-content:center">Mis valores</p>
+        <h2 class="section-title section-title--light" style="text-align:center">Lo que guía<br/><em>mi trabajo</em></h2>
+      </div>
+      <div class="va-grid">
+        {[
+          { icon: '🛡️', name: 'Calidad', desc: 'Cada traducción revisada con precisión para garantizar exactitud y coherencia total.' },
+          { icon: '🤝', name: 'Compromiso', desc: 'Tu proyecto, mi prioridad. Entrega puntual y atención personalizada en cada encargo.' },
+          { icon: '🎯', name: 'Precisión', desc: 'Terminología jurídica y técnica preservada con exactitud en todos los idiomas.' },
+          { icon: '🔒', name: 'Confidencialidad', desc: 'Todos tus documentos tratados con total discreción y máxima seguridad.' },
+        ].map(v => (
+          <div class="va-card">
+            <div class="va-icon">{v.icon}</div>
+            <div class="va-name">{v.name}</div>
+            <p class="va-desc">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <ContactForm lang="es"/>
+  </main>
+  <Footer lang="es"/>
+</Layout>
+
+<style>
+  /* PROFILE */
+  .profile-section {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 0; background: var(--white);
+  }
+  .profile-img-col {
+    padding: 5rem 3rem 5rem 4rem;
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 2rem;
+    background: var(--cream);
+  }
+  .profile-frame { position: relative; }
+  .profile-photo { width: 100%; max-width: 320px; aspect-ratio: 1/1; object-fit: cover; object-position: top center; border: 3px solid var(--gold); }
+  .profile-badges { display: flex; flex-direction: column; gap: 0.7rem; }
+  .pbadge { display: flex; align-items: center; gap: 0.7rem; font-size: 0.82rem; font-weight: 400; color: var(--navy); }
+  .pbadge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .profile-contact-links { display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+  .profile-contact-links a { font-size: 0.83rem; font-weight: 400; color: var(--navy); transition: color 0.2s; }
+  .profile-contact-links a:hover { color: var(--gold); }
+
+  .profile-text-col { padding: 5rem 4rem; }
+  .profile-p { font-size: 0.97rem; font-weight: 300; color: #2a2a2a; line-height: 1.9; margin-bottom: 1.2rem; }
+  .profile-stats { display: flex; gap: 2.5rem; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+  .pstat { display: flex; flex-direction: column; }
+  .pstat-n { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+  .pstat-l { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.3rem; }
+
+  /* SPEC */
+  .spec-section {
+    background: var(--blue-tint); padding: 5rem 4rem;
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start;
+  }
+  .spec-p { font-size: 0.97rem; font-weight: 300; color: var(--muted); line-height: 1.85; }
+  .spec-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .spec-card {
+    background: var(--white); border: 1.5px solid var(--border);
+    padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    text-decoration: none; color: inherit;
+  }
+  .spec-card:hover { border-color: var(--gold); box-shadow: 0 6px 24px rgba(201,125,10,0.1); transform: translateY(-2px); }
+  .spec-icon { font-size: 1.6rem; }
+  .spec-name { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--navy); }
+  .spec-desc { font-size: 0.8rem; font-weight: 300; color: var(--muted); line-height: 1.65; }
+
+  /* VALUES */
+  .values-about { background: var(--navy); padding: 5rem 4rem; }
+  .va-header { text-align: center; margin-bottom: 3rem; }
+  .va-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.07); }
+  .va-card { background: rgba(255,255,255,0.03); padding: 2rem 1.5rem; }
+  .va-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+  .va-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+  .va-desc { font-size: 0.82rem; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+  @media (max-width: 900px) {
+    .profile-section { grid-template-columns: 1fr; }
+    .profile-img-col { padding: 4rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
+    .profile-text-col { padding: 3rem 1.5rem; }
+    .spec-section { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; }
+    .spec-cards { grid-template-columns: 1fr 1fr; }
+    .values-about { padding: 4rem 1.5rem; }
+    .va-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .spec-cards { grid-template-columns: 1fr; }
+    .va-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 60);
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="nl" title="Technische Vertalingen — Fab Verbatim" description="Technische vertalingen van handleidingen, aanbestedingen en technische specificaties. Meer dan 30 jaar met fabrikanten van industriële machines.">
+  <Nav lang="nl" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Diensten</p><h1>Technische Vertalingen</h1><p>Vertaling van handleidingen, aanbestedingen en technische specificaties uit de industriële sector.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80" alt="Technische Vertalingen" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Wat zijn technische vertalingen?</h2>
+        <p class="faq-a">Technische vertalingen zijn het proces van het omzetten van teksten over gespecialiseerde onderwerpen in technologie of techniek van de ene taal naar de andere. Deze teksten omvatten doorgaans technische handleidingen, onderzoeksartikelen, productspecificaties, technische rapporten, octrooien en andere sterk gespecialiseerde inhoud.<br/><br/>Technische vertaling gaat verder dan eenvoudige woordconversie; het omvat de duidelijke overdracht van complexe concepten en terminologie die specifiek zijn voor een bepaald vakgebied. Met meer dan 30 jaar ervaring in nauw contact met fabrikanten van industriële machines kan ik technische vertalingen van de hoogste kwaliteit garanderen die nauwkeurig, consistent en begrijpelijk zijn voor personeel en operators.</p>
+        <div class="lang-badges"><div class="lang-badge"><span class="lang-badge-dot"></span>Nederlands</div><div class="lang-badge"><span class="lang-badge-dot"></span>Frans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Catalaans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Spaans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Engels</div></div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">Waarvoor dienen technische vertalingen?</h2><p class="faq-a">Technische vertalingen stellen individuen, bedrijven of entiteiten die verschillende talen spreken in staat om gespecialiseerde informatie te begrijpen en uit te wisselen. Ze maken de verspreiding van en toegang tot technologische kennis in internationale contexten mogelijk, dragen bij aan de introductie van technologische vooruitgang en zorgen voor de correcte toepassing van normen en technische praktijken in verschillende taalomgevingen.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Wat kost een technische vertaling?</h2><p class="faq-a">De prijs kan variëren afhankelijk van de complexiteit van de technische termen, het volume van het document, de korte deadline en het taalpaar. De complexe aard van de technische terminologie in de tekst kan de benodigde tijd en middelen voor de vertaling verhogen. Neem contact op voor een gedetailleerde offerte op maat.</p></div></div>
+    <ContactForm lang="nl"/>
+  </main>
+  <Footer lang="nl"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

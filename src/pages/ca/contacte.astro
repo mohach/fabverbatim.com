@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="ca" title="Contacte — Fab Verbatim">
+  <Nav lang="ca" currentPage="contact"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Contacte</p><h1>Sol·licita més informació</h1><p>Si tens alguna pregunta o necessites un pressupost, no dubtis a contactar-me.</p></div></div>
+    <ContactForm lang="ca"/>
+  </main>
+  <Footer lang="ca"/>
+</Layout>
+<script>const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*60); }); }, {threshold:0.07}); document.querySelectorAll('.reveal').forEach(el => obs.observe(el));</script>

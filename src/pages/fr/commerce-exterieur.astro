@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="fr" title="Traduction en Commerce Extérieur — Fab Verbatim" description="Traductions spécialisées en commerce international et extérieur. Technicienne en commerce extérieur certifiée par la Generalitat de Catalunya.">
+  <Nav lang="fr" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Services</p><h1>Traduction en Commerce Extérieur</h1><p>Traductions de contrats internationaux, documents douaniers et documentation d'import-export.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1200&q=80" alt="Commerce Extérieur" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Qu'est-ce qu'une traduction en commerce extérieur ?</h2>
+        <p class="faq-a">Les traductions en commerce extérieur désignent le processus de transposition de documents relatifs aux transactions commerciales internationales d'une langue à une autre. Ces documents peuvent inclure des contrats commerciaux, des accords de distribution, des documents douaniers et commerciaux, des factures, des termes et conditions du commerce international et de la correspondance commerciale.<br/><br/>En tant que technicienne en commerce extérieur certifiée par la Generalitat de Catalunya, je propose des traductions précises de contrats internationaux et de documents clés pour les opérations d'import-export.</p>
+        <div class="lang-badges"><div class="lang-badge"><span class="lang-badge-dot"></span>Néerlandais</div><div class="lang-badge"><span class="lang-badge-dot"></span>Français</div><div class="lang-badge"><span class="lang-badge-dot"></span>Catalan</div><div class="lang-badge"><span class="lang-badge-dot"></span>Espagnol</div><div class="lang-badge"><span class="lang-badge-dot"></span>Anglais</div></div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">Pourquoi ai-je besoin de traductions en commerce extérieur ?</h2><p class="faq-a">Les traductions en commerce extérieur permettent une communication efficace entre entreprises de différents pays. Elles permettent une interprétation correcte des contrats, des documents douaniers, des factures et d'autres textes commerciaux, soutenant ainsi la bonne exécution des conditions commerciales dans un contexte international et dépassant les barrières linguistiques dans le cadre du commerce mondial.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Combien coûte une traduction en commerce extérieur ?</h2><p class="faq-a">Le prix peut varier selon la complexité du document, le volume, le délai urgent, la paire de langues et la spécialisation requise en commerce international. N'hésitez pas à me contacter pour obtenir un devis détaillé adapté à vos besoins.</p></div></div>
+    <ContactForm lang="fr"/>
+  </main>
+  <Footer lang="fr"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

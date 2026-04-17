@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="nl" title="Privacybeleid — Fab Verbatim" description="Privacybeleid van Fab Verbatim conform de AVG en de LOPDGDD.">
+  <Nav lang="nl" currentPage=""/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Juridisch</p><h1>Privacybeleid</h1><p>Verordening (EU) 2016/679 — AVG · Organieke Wet 3/2018 — LOPDGDD</p></div></div>
+    <section class="legal-body">
+      <div class="legal-inner reveal">
+        <p class="legal-intro">Overeenkomstig Verordening (EU) 2016/679 en de Organieke Wet 3/2018 worden gebruikers van deze website geïnformeerd over het privacybeleid en de verwerking van persoonsgegevens.</p>
+        <div class="legal-section"><h2 class="legal-h2">1. Verwerkingsverantwoordelijke</h2><div class="legal-data-grid"><div class="legal-data-row"><span class="legal-data-label">Verantwoordelijke</span><span class="legal-data-val">Fabienne Colette Marie Françoise Annys</span></div><div class="legal-data-row"><span class="legal-data-label">Handelsnaam</span><span class="legal-data-val">Fab Verbatim</span></div><div class="legal-data-row"><span class="legal-data-label">NIF</span><span class="legal-data-val">X1233450Y</span></div><div class="legal-data-row"><span class="legal-data-label">Adres</span><span class="legal-data-val">Carrer Sant Pere nº 7, Sant Climent de Llobregat, 08849 Barcelona, Spanje</span></div><div class="legal-data-row"><span class="legal-data-label">E-mail</span><span class="legal-data-val"><a href="mailto:contact@fabverbatim.com">contact@fabverbatim.com</a></span></div></div></div>
+        <div class="legal-section"><h2 class="legal-h2">2. Doel van de verwerking</h2><p class="legal-p">De persoonsgegevens die de gebruiker vrijwillig verstrekt via het contactformulier worden gebruikt voor het beheren van vragen of verzoeken van de gebruiker en het opzetten van communicatie voor de dienstverlening.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">3. Rechtsgrond</h2><p class="legal-p">De rechtsgrond voor de verwerking van uw gegevens is de toestemming van de gebruiker bij het invullen van het contactformulier en het aanvaarden van dit privacybeleid.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">4. Verwerkte gegevens</h2><p class="legal-p">De verwerkte persoonsgegevens zijn die welke de gebruiker via het contactformulier verstrekt: naam en voornaam, e-mailadres en alle andere informatie in het bericht. De gegevens worden vertrouwelijk behandeld en niet voor andere doeleinden gebruikt.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">5. Bewaartermijn</h2><p class="legal-p">De persoonsgegevens worden bewaard zolang als nodig is om de vraag en/of relatie met de gebruiker te beheren, en in ieder geval totdat om verwijdering wordt verzocht.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">6. Ontvangers</h2><p class="legal-p">Persoonsgegevens worden niet aan derden doorgegeven, tenzij wettelijk verplicht of noodzakelijk voor de verlening van een door de gebruiker gevraagde dienst.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">7. Rechten van de gebruiker</h2><p class="legal-p">U kunt uw rechten op inzage, rectificatie, verwijdering, beperking, bezwaar en overdraagbaarheid uitoefenen door contact op te nemen via <a href="mailto:contact@fabverbatim.com">contact@fabverbatim.com</a>, met vermelding van uw verzoek en een kopie van uw identiteitsbewijs.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">8. Klachten</h2><p class="legal-p">Als u van mening bent dat de verwerking van uw persoonsgegevens in strijd is met de regelgeving, heeft u het recht een klacht in te dienen bij de Spaanse Gegevensbeschermingsautoriteit (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p></div>
+      </div>
+    </section>
+  </main>
+  <Footer lang="nl"/>
+</Layout>
+<style>
+  .legal-body{background:var(--white);padding:5rem 4rem}.legal-inner{max-width:820px;margin:0 auto}.legal-intro{font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem}.legal-section{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border)}.legal-h2{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.04em}.legal-p{font-size:0.95rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:0.9rem}.legal-p a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}.legal-data-grid{display:flex;flex-direction:column;border:1px solid var(--border);margin-top:1rem}.legal-data-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--border)}.legal-data-row:last-child{border-bottom:none}.legal-data-label{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);padding:0.85rem 1rem;background:var(--blue-tint);border-right:1px solid var(--border)}.legal-data-val{font-size:0.9rem;font-weight:300;color:#2a2a2a;padding:0.85rem 1rem}.legal-data-val a{color:var(--gold)}
+  @media(max-width:900px){.legal-body{padding:4rem 1.5rem}.legal-data-row{grid-template-columns:1fr}.legal-data-label{border-right:none;border-bottom:1px solid var(--border)}}
+</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

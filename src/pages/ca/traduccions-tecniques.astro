@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="ca" title="Traduccions Tècniques — Fab Verbatim" description="Traduccions tècniques de manuals, licitacions i especificacions tècniques. Més de 30 anys treballant amb fabricants de maquinària industrial.">
+  <Nav lang="ca" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Serveis</p><h1>Traduccions Tècniques</h1><p>Traducció de manuals d'instruccions, licitacions i especificacions tècniques del sector industrial.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80" alt="Traduccions Tècniques" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Què són les traduccions tècniques?</h2>
+        <p class="faq-a">Les traduccions tècniques consisteixen en la conversió de textos que tracten sobre matèries especialitzades en tecnologia o enginyeria d'un idioma a un altre. Aquests textos solen incloure manuals tècnics, articles de recerca, especificacions de productes, informes tècnics, patents i altres continguts altament especialitzats.<br/><br/>La traducció tècnica va més enllà de la simple conversió de paraules; implica la transmissió clara de conceptes complexos i terminologia específica d'un camp determinat. Amb més de 30 anys d'experiència treballant en estreta col·laboració amb fabricants de maquinària industrial, puc garantir traduccions tècniques de la màxima qualitat.</p>
+        <div class="lang-badges">
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Neerlandès</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Francès</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Català</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Espanyol</div>
+          <div class="lang-badge"><span class="lang-badge-dot"></span>Anglès</div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">Per a què serveixen les traduccions tècniques?</h2><p class="faq-a">Les traduccions tècniques permeten a persones, empreses i entitats que parlen idiomes diferents comprendre i intercanviar informació especialitzada. Fan possible la difusió i l'accés al coneixement tecnològic en contextos internacionals, contribuint a la introducció de nous avenços tecnològics i a la correcta aplicació de normes i pràctiques tècniques en entorns lingüístics diferents.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Quant costa una traducció tècnica?</h2><p class="faq-a">El preu pot variar en funció de la complexitat dels termes tècnics, el volum del document, el termini urgent i el parell d'idiomes. La naturalesa complexa de la terminologia tècnica pot augmentar el temps i els recursos necessaris per a la traducció. Contacteu per obtenir un pressupost detallat.</p></div></div>
+    <ContactForm lang="ca"/>
+  </main>
+  <Footer lang="ca"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

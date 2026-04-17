@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Back bubble - lightest blue -->
+  <path d="M75 18 C90 18 98 28 98 40 C98 52 90 62 75 62 L68 62 L62 74 L58 62 L30 62 C15 62 7 52 7 40 C7 28 15 18 30 18 Z" fill="#a8d4f0" opacity="0.7"/>
+  <!-- Middle bubble -->
+  <path d="M72 10 C86 10 95 21 95 34 C95 47 86 58 72 58 L65 58 L59 70 L55 58 L28 58 C14 58 5 47 5 34 C5 21 14 10 28 10 Z" fill="#5aabda" opacity="0.85"/>
+  <!-- Front bubble - darkest -->
+  <path d="M68 4 C82 4 92 15 92 28 C92 41 82 52 68 52 L60 52 L54 65 L50 52 L25 52 C11 52 2 41 2 28 C2 15 11 4 25 4 Z" fill="#1e6fa8"/>
+</svg>

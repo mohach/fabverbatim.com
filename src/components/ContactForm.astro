@@ -1,0 +1,341 @@
+---
+export interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+
+const labels: Record<string, any> = {
+  es: { heading: 'Solicita más información', sub: 'Si tienes alguna pregunta o necesitas un presupuesto, no dudes en contactarme.', name: 'Nombre *', email: 'Email *', from: 'Documento original', to: 'Traducción a', select: 'Selecciona idioma...', msg: 'Mensaje (opcional)', msgph: 'Cuéntame tu documento, plazo y requisitos...', privacy: 'He leído la Política de Privacidad y acepto el tratamiento de mis datos para gestionar esta solicitud.', submit: 'Enviar mensaje', success: '✓ ¡Mensaje enviado! Me pondré en contacto contigo en breve.', error: 'Algo salió mal. Por favor escríbeme directamente a contact@fabverbatim.com' },
+  en: { heading: 'Request more information', sub: 'If you have any questions or need a quote, please do not hesitate to contact me.', name: 'Name *', email: 'Email *', from: 'Original document', to: 'Translation into', select: 'Select language...', msg: 'Message (optional)', msgph: 'Tell me about your document, deadline and specific requirements...', privacy: 'I have read the Privacy Policy and accept the processing of my data for the handling of this request.', submit: 'Send message', success: '✓ Message sent! I will get back to you shortly.', error: 'Something went wrong. Please email contact@fabverbatim.com directly.' },
+  ca: { heading: 'Sol·licita més informació', sub: 'Si tens alguna pregunta o necessites un pressupost, no dubtis a contactar-me.', name: 'Nom *', email: 'Email *', from: 'Document original', to: 'Traducció a', select: 'Selecciona idioma...', msg: 'Missatge (opcional)', msgph: 'Explica el teu document, termini i requisits...', privacy: "He llegit la Política de Privacitat i accepto el tractament de les meves dades.", submit: 'Enviar missatge', success: '✓ Missatge enviat!', error: 'Ha ocorregut un error.' },
+  fr: { heading: "Demandez plus d'informations", sub: "Si vous avez des questions ou avez besoin d'un devis, n'hésitez pas à me contacter.", name: 'Nom *', email: 'Email *', from: 'Document original', to: 'Traduction en', select: 'Sélectionnez la langue...', msg: 'Message (facultatif)', msgph: 'Parlez-moi de votre document, délai et exigences...', privacy: "J'ai lu la Politique de Confidentialité et j'accepte le traitement de mes données.", submit: 'Envoyer le message', success: '✓ Message envoyé!', error: "Une erreur s'est produite." },
+  nl: { heading: 'Vraag meer informatie', sub: 'Heeft u vragen of heeft u een offerte nodig, neem dan gerust contact met mij op.', name: 'Naam *', email: 'Email *', from: 'Origineel document', to: 'Vertaling naar', select: 'Selecteer taal...', msg: 'Bericht (optioneel)', msgph: 'Vertel me over uw document, deadline en vereisten...', privacy: 'Ik heb het Privacybeleid gelezen en ga akkoord met de verwerking van mijn gegevens.', submit: 'Bericht verzenden', success: '✓ Bericht verzonden!', error: 'Er is een fout opgetreden.' },
+};
+
+const L = labels[lang] || labels['es'];
+const langOptions = ['Español', 'Catalán', 'Inglés', 'Francés', 'Neerlandés'];
+---
+
+<section class="contact-section" id="contacto">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p class="eyebrow">{L.heading}</p>
+      <p class="contact-sub">{L.sub}</p>
+
+      <ul class="cinfo-list">
+        <li>
+          <div class="cinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <span class="cinfo-label">Dirección</span>
+            <span class="cinfo-val">C/ Sant Pere nº 7, 08849 Sant Climent de Llobregat</span>
+          </div>
+        </li>
+        <li>
+          <div class="cinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span class="cinfo-label">Email</span>
+            <a href="mailto:contact@fabverbatim.com" class="cinfo-val cinfo-link">contact@fabverbatim.com</a>
+          </div>
+        </li>
+        <li>
+          <div class="cinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 5.25 5.25l1.13-1.34a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 13.92z"/></svg>
+          </div>
+          <div>
+            <span class="cinfo-label">Teléfono</span>
+            <a href="tel:+34630573445" class="cinfo-val cinfo-link">+34 630 573 445</a>
+          </div>
+        </li>
+        <li>
+          <div class="cinfo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <span class="cinfo-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/fab-verbatim-b005ab268/" target="_blank" rel="noopener" class="cinfo-val cinfo-link">Fab Verbatim</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="fabienne-card">
+        <img src="/fabienne.png" alt="Fabienne Annys" class="fab-photo"/>
+        <div>
+          <div class="fab-name">Fabienne Annys</div>
+          <div class="fab-creds">Traductora Jurada en Bélgica<br/>Traductora Jurada en España<br/>Traductora Jurada en los Países Bajos</div>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.4!2d1.9823!3d41.3123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49b0f3b5b3b5b%3A0x1!2sSant%20Climent%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1681000000000!5m2!1ses!2ses&q=Sant+Climent+de+Llobregat,+Barcelona,+Spain"
+          width="100%"
+          height="180"
+          style="border:0;filter:grayscale(30%) contrast(1.1);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación Fab Verbatim — Sant Climent de Llobregat"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <!-- Replace YOUR_FORM_ID with your Formspree ID from formspree.io -->
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nueva consulta desde fabverbatim.com"/>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+
+        <div class="form-row">
+          <div class="fgroup">
+            <label class="flabel">{L.name}</label>
+            <input type="text" name="name" id="f-name" class="fcontrol" required placeholder="Tu nombre completo"/>
+            <span class="ferr" id="err-name"></span>
+          </div>
+          <div class="fgroup">
+            <label class="flabel">{L.email}</label>
+            <input type="email" name="email" id="f-email" class="fcontrol" required placeholder="tu@email.com"/>
+            <span class="ferr" id="err-email"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="fgroup">
+            <label class="flabel">{L.from}</label>
+            <div class="fselect-wrap">
+              <select name="original_language" class="fcontrol fselect">
+                <option value="">{L.select}</option>
+                {langOptions.map(o => <option value={o}>{o}</option>)}
+              </select>
+              <svg class="fselect-arrow" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+          <div class="fgroup">
+            <label class="flabel">{L.to}</label>
+            <div class="fselect-wrap">
+              <select name="target_language" class="fcontrol fselect">
+                <option value="">{L.select}</option>
+                {langOptions.map(o => <option value={o}>{o}</option>)}
+              </select>
+              <svg class="fselect-arrow" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="fgroup">
+          <label class="flabel">{L.msg}</label>
+          <textarea name="message" class="fcontrol ftextarea" placeholder={L.msgph}></textarea>
+        </div>
+
+        <div class="fgroup fprivacy">
+          <label class="privacy-label">
+            <input type="checkbox" id="f-privacy" name="privacy_accepted" required/>
+            <span class="checkbox-custom"></span>
+            <span class="privacy-text"><a href="/politica-de-privacidad" target="_blank" style="color:var(--gold);text-decoration:underline;text-underline-offset:2px;">{L.privacy}</a></span>
+          </label>
+          <span class="ferr" id="err-privacy"></span>
+        </div>
+
+        <button type="submit" class="fsubmit" id="fsubmit">
+          <span class="fsubmit-text">{L.submit}</span>
+          <span class="fsubmit-spinner"></span>
+          <svg class="fsubmit-arrow" viewBox="0 0 16 16" fill="none"><path d="M1 8h14M9 2l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="fmsg fsuccess" id="f-success">{L.success}</div>
+        <div class="fmsg ferror"  id="f-error">{L.error}</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    background: var(--offwhite);
+    padding: 0;
+  }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  /* LEFT */
+  .contact-info {
+    background: var(--navy);
+    padding: 5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact-info .eyebrow { color: var(--gold-lt); margin-bottom: 0; }
+  .contact-info .eyebrow::before { background: var(--gold-lt); }
+  .contact-sub {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.85;
+  }
+
+  .cinfo-list { list-style: none; display: flex; flex-direction: column; gap: 1.3rem; }
+  .cinfo-list li { display: flex; gap: 0.9rem; align-items: flex-start; }
+  .cinfo-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    border: 1px solid rgba(201,125,10,0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); border-radius: 3px;
+  }
+  .cinfo-icon svg { width: 15px; height: 15px; }
+  .cinfo-label {
+    display: block; font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.3); margin-bottom: 0.18rem;
+  }
+  .cinfo-val { font-size: 0.88rem; color: rgba(255,255,255,0.8); display: block; }
+  .cinfo-link { transition: color 0.2s; }
+  .cinfo-link:hover { color: var(--gold-lt); }
+
+  .fabienne-card {
+    display: flex; align-items: center; gap: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 2rem;
+    margin-top: auto;
+  }
+  .contact-map {
+    margin-top: 1.5rem;
+    border: 1px solid rgba(201,125,10,0.2);
+    overflow: hidden;
+  }
+
+  .fab-photo {
+    width: 70px; height: 70px; border-radius: 50%;
+    object-fit: cover; object-position: top center;
+    border: 2px solid var(--gold); flex-shrink: 0;
+  }
+  .fab-name { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+  .fab-creds { font-size: 0.7rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+  /* RIGHT / FORM */
+  .contact-form-wrap {
+    background: var(--white);
+    padding: 5rem 3.5rem;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+  .fgroup { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.2rem; }
+  .flabel { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .fcontrol {
+    background: var(--cream); border: 1.5px solid var(--border);
+    padding: 0.78rem 1rem; font-family: var(--sans);
+    font-size: 0.92rem; font-weight: 300; color: var(--text);
+    outline: none; width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    border-radius: 2px; appearance: none;
+  }
+  .fcontrol:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,125,10,0.09); }
+  .fcontrol.invalid { border-color: #d93535; }
+  .fselect-wrap { position: relative; }
+  .fselect { cursor: pointer; padding-right: 2.2rem; }
+  .fselect-arrow { position: absolute; right: 0.9rem; top: 50%; transform: translateY(-50%); width: 10px; pointer-events: none; color: var(--muted); }
+  .ftextarea { height: 110px; resize: vertical; }
+  .ferr { font-size: 0.72rem; color: #d93535; display: none; }
+  .ferr.show { display: block; }
+
+  .fprivacy { margin-top: 0.5rem; }
+  .privacy-label { display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; }
+  .privacy-label input { display: none; }
+  .checkbox-custom {
+    width: 17px; height: 17px; flex-shrink: 0;
+    border: 1.5px solid var(--border); background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s; margin-top: 0.15rem; border-radius: 2px;
+  }
+  .privacy-label input:checked ~ .checkbox-custom { background: var(--navy); border-color: var(--navy); }
+  .privacy-label input:checked ~ .checkbox-custom::after {
+    content: ''; width: 9px; height: 5px;
+    border-left: 2px solid white; border-bottom: 2px solid white;
+    transform: rotate(-45deg) translateY(-1px); display: block;
+  }
+  .privacy-text { font-size: 0.78rem; font-weight: 300; color: var(--muted); line-height: 1.6; }
+
+  .fsubmit {
+    margin-top: 1.5rem;
+    background: var(--navy); color: var(--white);
+    border: none; cursor: pointer; padding: 1rem 2.2rem;
+    font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    transition: background 0.22s, transform 0.15s; border-radius: 2px;
+  }
+  .fsubmit:hover:not(:disabled) { background: var(--gold); transform: translateY(-1px); }
+  .fsubmit:disabled { opacity: 0.7; cursor: not-allowed; }
+  .fsubmit-arrow { width: 16px; height: 16px; }
+  .fsubmit-spinner {
+    display: none; width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.3); border-top-color: white;
+    border-radius: 50%; animation: spin 0.7s linear infinite;
+  }
+  .fsubmit.loading .fsubmit-spinner { display: block; }
+  .fsubmit.loading .fsubmit-text, .fsubmit.loading .fsubmit-arrow { display: none; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .fmsg { display: none; margin-top: 1rem; padding: 0.9rem 1.2rem; font-size: 0.88rem; font-weight: 500; border-radius: 2px; }
+  .fsuccess { background: rgba(22,163,74,0.1); color: #166534; border: 1px solid rgba(22,163,74,0.25); }
+  .ferror   { background: rgba(220,38,38,0.08); color: #991b1b; border: 1px solid rgba(220,38,38,0.2); }
+  .fmsg.visible { display: block; }
+
+  @media (max-width: 900px) {
+    .contact-inner { grid-template-columns: 1fr; }
+    .contact-info { padding: 3rem 1.2rem 2rem; }
+    .contact-form-wrap { padding: 2.5rem 1.2rem 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-map iframe { height: 160px; }
+    .fabienne-card { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+  }
+  @media (max-width: 480px) {
+    .fsubmit { width: 100%; justify-content: center; }
+    .privacy-text { font-size: 0.72rem; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('fsubmit') as HTMLButtonElement;
+  const successMsg = document.getElementById('f-success')!;
+  const errorMsg = document.getElementById('f-error')!;
+
+  function showErr(id: string, msg: string) {
+    const el = document.getElementById(id)!;
+    el.textContent = msg;
+    el.classList.add('show');
+  }
+  function clearErrs() {
+    document.querySelectorAll('.ferr').forEach(e => { e.textContent = ''; e.classList.remove('show'); });
+    document.querySelectorAll('.fcontrol').forEach(e => e.classList.remove('invalid'));
+  }
+  function validate(): boolean {
+    clearErrs(); let ok = true;
+    const name = (document.getElementById('f-name') as HTMLInputElement).value.trim();
+    const email = (document.getElementById('f-email') as HTMLInputElement).value.trim();
+    const privacy = (document.getElementById('f-privacy') as HTMLInputElement).checked;
+    if (!name) { showErr('err-name', 'Requerido'); document.getElementById('f-name')!.classList.add('invalid'); ok = false; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr('err-email', 'Email no válido'); document.getElementById('f-email')!.classList.add('invalid'); ok = false; }
+    if (!privacy) { showErr('err-privacy', 'Debes aceptar la política de privacidad'); ok = false; }
+    return ok;
+  }
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+    submitBtn.classList.add('loading'); submitBtn.disabled = true;
+    successMsg.classList.remove('visible'); errorMsg.classList.remove('visible');
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (res.ok) { form.reset(); successMsg.classList.add('visible'); successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+      else errorMsg.classList.add('visible');
+    } catch { errorMsg.classList.add('visible'); }
+    finally { submitBtn.classList.remove('loading'); submitBtn.disabled = false; }
+  });
+</script>

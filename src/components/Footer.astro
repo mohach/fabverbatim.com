@@ -1,0 +1,123 @@
+---
+export interface Props { lang?: string; }
+const { lang = 'es' } = Astro.props;
+
+const navData: Record<string, any> = {
+  es: { copy: '© Fab Verbatim 2025. Todos los derechos reservados.', privacy: 'Política de privacidad', privacyUrl: '/politica-de-privacidad', legal_notice: 'Aviso legal', legalNoticeUrl: '/aviso-legal', services: 'Servicios', contact: 'Contacto', sworn: 'Traducciones Juradas', legal: 'Traducciones Jurídicas', economic: 'Económico-Financieras', trade: 'Comercio Exterior', technical: 'Traducciones Técnicas', swornUrl: '/traducciones-juradas', legalUrl: '/traducciones-juridicas', econUrl: '/traducciones-economico-financieras', tradeUrl: '/traducciones-comercio-exterior', techUrl: '/traducciones-tecnicas', aboutUrl: '/sobre-mi', contactUrl: '/contacto' },
+  en: { copy: '© Fab Verbatim 2025. All rights reserved.', privacy: 'Privacy Policy', privacyUrl: '/en/privacy-policy', legal_notice: 'Legal Notice', legalNoticeUrl: '/en/legal-notice', services: 'Services', contact: 'Contact', sworn: 'Sworn Translations', legal: 'Legal Translations', economic: 'Economic & Financial', trade: 'Foreign Trade', technical: 'Technical Translations', swornUrl: '/en/sworn-translation', legalUrl: '/en/legal-translations', econUrl: '/en/economic-financial', tradeUrl: '/en/foreign-trade', techUrl: '/en/technical-translations', aboutUrl: '/en/about-me', contactUrl: '/en/contact' },
+  ca: { copy: '© Fab Verbatim 2025. Tots els drets reservats.', privacy: 'Política de privacitat', privacyUrl: '/ca/politica-de-privacitat', legal_notice: 'Avís legal', legalNoticeUrl: '/ca/avis-legal', services: 'Serveis', contact: 'Contacte', sworn: 'Traduccions Jurades', legal: 'Traduccions Jurídiques', economic: 'Econòmico-Financeres', trade: 'Comerç Exterior', technical: 'Traduccions Tècniques', swornUrl: '/ca/traduccions-jurades', legalUrl: '/ca/traduccions-juridiques', econUrl: '/ca/traduccions-economiques', tradeUrl: '/ca/comerc-exterior', techUrl: '/ca/traduccions-tecniques', aboutUrl: '/ca/sobre-mi', contactUrl: '/ca/contacte' },
+  fr: { copy: '© Fab Verbatim 2025. Tous droits réservés.', privacy: 'Politique de confidentialité', privacyUrl: '/fr/politique-confidentialite', legal_notice: 'Mentions légales', legalNoticeUrl: '/fr/mentions-legales', services: 'Services', contact: 'Contact', sworn: 'Traductions Assermentées', legal: 'Traductions Juridiques', economic: 'Économie & Finance', trade: 'Commerce International', technical: 'Traductions Techniques', swornUrl: '/fr/traduction-assermentee', legalUrl: '/fr/traductions-juridiques', econUrl: '/fr/traduction-economique', tradeUrl: '/fr/commerce-exterieur', techUrl: '/fr/traductions-techniques', aboutUrl: '/fr/sur-moi', contactUrl: '/fr/contact' },
+  nl: { copy: '© Fab Verbatim 2025. Alle rechten voorbehouden.', privacy: 'Privacybeleid', privacyUrl: '/nl/privacybeleid', legal_notice: 'Juridische kennisgeving', legalNoticeUrl: '/nl/juridische-kennisgeving', services: 'Diensten', contact: 'Contact', sworn: 'Beëdigde Vertalingen', legal: 'Juridische Vertalingen', economic: 'Economisch & Financieel', trade: 'Buitenlandse Handel', technical: 'Technische Vertalingen', swornUrl: '/nl/beedigde-vertalingen', legalUrl: '/nl/juridische-vertalingen', econUrl: '/nl/economische-vertalingen', tradeUrl: '/nl/buitenlandse-handel', techUrl: '/nl/technische-vertalingen', aboutUrl: '/nl/over-mij', contactUrl: '/nl/contact' },
+};
+const n = navData[lang] || navData['es'];
+---
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <img src="/logo-fab.png" alt="Fab Verbatim" class="footer-logo-img"/>
+      </div>
+      <p class="footer-desc">Traductora jurada inscrita en Bélgica, España y los Países Bajos. Traducciones oficiales · Apostilla · Legalización</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">{n.services}</p>
+      <a href={n.swornUrl}>{n.sworn}</a>
+      <a href={n.legalUrl}>{n.legal}</a>
+      <a href={n.econUrl}>{n.economic}</a>
+      <a href={n.tradeUrl}>{n.trade}</a>
+      <a href={n.techUrl}>{n.technical}</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-title">{n.contact}</p>
+      <a href="mailto:contact@fabverbatim.com">contact@fabverbatim.com</a>
+      <a href="tel:+34630573445">+34 630 573 445</a>
+      <a href="https://www.linkedin.com/in/fab-verbatim-b005ab268/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer-addr">C/ Sant Pere nº 7<br/>08849 Sant Climent de Llobregat</span>
+    </div>
+  </div>
+
+  <!-- Recovery Banner -->
+  <div class="recovery-banner">
+    <img
+      src="/recovery-logo.png"
+      alt="Financiado por la Unión Europea NextGenerationEU — Gobierno de España — Plan de Recuperación, Transformación y Resiliencia"
+      class="recovery-img"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="footer-bottom">
+    <span>{n.copy}</span>
+    <div class="footer-legal-links">
+      <a href={n.legalNoticeUrl}>{n.legal_notice}</a>
+      <span class="footer-sep">·</span>
+      <a href={n.privacyUrl}>{n.privacy}</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer { background: var(--navy-dark); border-top: 1px solid rgba(255,255,255,0.05); }
+
+  .footer-inner {
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 3rem; padding: 4rem 4rem 3rem;
+  }
+
+  .footer-logo-row { margin-bottom: 1rem; }
+  .footer-logo-img { height: 52px; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.9; }
+  .footer-desc { font-size: 0.78rem; font-weight: 300; color: rgba(255,255,255,0.35); line-height: 1.7; }
+
+  .footer-col { display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col-title { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+  .footer-col a { font-size: 0.82rem; font-weight: 300; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+  .footer-col a:hover { color: var(--gold-lt); }
+  .footer-addr { font-size: 0.78rem; font-weight: 300; color: rgba(255,255,255,0.28); line-height: 1.6; margin-top: 0.3rem; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 1.4rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.72rem; color: rgba(255,255,255,0.22); letter-spacing: 0.04em;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+  .footer-bottom a:hover { color: var(--gold); }
+  .footer-legal-links { display: flex; align-items: center; gap: 0.7rem; }
+  .footer-sep { color: rgba(255,255,255,0.15); }
+
+  .recovery-banner {
+    border-top: 2px solid var(--border);
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+  }
+
+  .recovery-img {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    opacity: 1;
+    filter: none;
+    transition: opacity 0.2s;
+  }
+
+  .recovery-img:hover { opacity: 0.8; }
+
+  @media (max-width: 900px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { padding: 1.2rem 1.2rem; flex-direction: column; gap: 0.6rem; text-align: center; }
+    .footer-legal-links { justify-content: center; }
+    .recovery-banner { padding: 1.5rem 1.2rem; }
+    .recovery-img { height: 52px; }
+  }
+  @media (max-width: 480px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-logo-img { height: 40px; }
+  }
+</style>

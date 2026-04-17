@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="nl" title="Vertalingen Buitenlandse Handel — Fab Verbatim" description="Gespecialiseerde vertalingen voor buitenlandse handel en internationale handel. Gecertificeerd technicus buitenlandse handel door de Generalitat de Catalunya.">
+  <Nav lang="nl" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Diensten</p><h1>Vertalingen Buitenlandse Handel</h1><p>Vertalingen van internationale contracten, douanedocumenten en import/export-documentatie.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1200&q=80" alt="Buitenlandse Handel" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Wat zijn vertalingen in buitenlandse handel?</h2>
+        <p class="faq-a">Vertalingen voor buitenlandse handel verwijzen naar het proces van het omzetten van documenten met betrekking tot internationale handelstransacties van de ene taal naar de andere. Deze documenten kunnen commerciële contracten, distributieovereenkomsten, douane- en handelsdocumenten, facturen, internationale handelsvoorwaarden en zakelijke correspondentie omvatten.<br/><br/>Als gecertificeerd technicus buitenlandse handel door de Generalitat de Catalunya bied ik nauwkeurige vertalingen aan van internationale contracten en sleuteldocumenten voor import- en exportoperaties.</p>
+        <div class="lang-badges"><div class="lang-badge"><span class="lang-badge-dot"></span>Nederlands</div><div class="lang-badge"><span class="lang-badge-dot"></span>Frans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Catalaans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Spaans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Engels</div></div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">Waarom heb ik vertalingen voor buitenlandse handel nodig?</h2><p class="faq-a">Vertalingen voor buitenlandse handel maken effectieve communicatie mogelijk tussen bedrijven in verschillende landen. Ze zorgen voor een correcte interpretatie van contracten, douanedocumenten, facturen en andere commerciële teksten, ondersteunen de correcte uitvoering van commerciële voorwaarden in een internationale context en helpen taalbarrières te overwinnen binnen het mondiale handelskader.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Wat kost een vertaling voor buitenlandse handel?</h2><p class="faq-a">De prijs kan variëren afhankelijk van de complexiteit van het document, het volume, de korte deadline, het taalpaar en de vereiste specialisatie in internationale handel. Neem contact op voor een gedetailleerde offerte aangepast aan uw behoeften.</p></div></div>
+    <ContactForm lang="nl"/>
+  </main>
+  <Footer lang="nl"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

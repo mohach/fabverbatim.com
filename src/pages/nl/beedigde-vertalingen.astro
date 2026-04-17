@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="nl" title="Beëdigde Vertalingen — Fab Verbatim" description="Beëdigde vertalingen van officiële documenten met volledige juridische geldigheid, gecertificeerde digitale handtekening en apostille-beheer.">
+  <Nav lang="nl" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Diensten</p><h1>Beëdigde Vertalingen</h1><p>Officiële vertalingen van documenten met volledige juridische geldigheid, gecertificeerde digitale handtekening en apostille-beheer.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Beëdigde Vertalingen" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Wat zijn beëdigde vertalingen?</h2>
+        <p class="faq-a">Beëdigde vertalingen zijn vertalingen van documenten uitgevoerd door een gecertificeerd of beëdigd vertaler. Deze vertalingen hebben een juridische en officiële status, erkend door overheidsinstanties, rechtbanken en andere instellingen.<br/><br/>Ik ben ingeschreven in het nationale Belgische register van het departement justitie van de Federale Overheidsdienst voor Spaans, Catalaans, Nederlands, Frans en Engels, en in het nationale Spaanse register van het Ministerie van Buitenlandse Zaken. Sinds december 2022 beschikken beëdigde vertalingen in België over een gecertificeerde digitale handtekening. Als uw vertaling in het buitenland gebruikt moet worden, beheer ik ook het apostille-proces.</p>
+        <div class="lang-badges"><div class="lang-badge"><span class="lang-badge-dot"></span>Nederlands</div><div class="lang-badge"><span class="lang-badge-dot"></span>Frans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Catalaans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Spaans</div><div class="lang-badge"><span class="lang-badge-dot"></span>Engels</div></div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">Waarvoor zijn beëdigde vertalingen nodig?</h2><p class="faq-a">Beëdigde vertalingen zijn vereist bij immigratieprocedures, visumaanvragen, academische dossiers, juridische documenten, contracten en testamenten. Deze vertalingen worden geaccepteerd als geldig bewijs in juridische en administratieve procedures, aangezien de beëdigd vertaler geacht wordt de nodige vaardigheden te hebben om een nauwkeurige en betrouwbare vertaling te leveren.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Wat kost een beëdigde vertaling?</h2><p class="faq-a">De kosten kunnen aanzienlijk variëren afhankelijk van het taalpaar, de complexiteit van het document, de opmaak en de lengte van de tekst. Ik bied op maat gemaakte offertes aan uw specifieke behoeften. Neem contact op voor een nauwkeurige prijsopgave.</p></div></div>
+    <ContactForm lang="nl"/>
+  </main>
+  <Footer lang="nl"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

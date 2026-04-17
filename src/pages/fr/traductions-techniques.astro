@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="fr" title="Traductions Techniques — Fab Verbatim" description="Traductions techniques de manuels, appels d'offres et spécifications techniques. Plus de 30 ans avec des fabricants de machines industrielles.">
+  <Nav lang="fr" currentPage="services"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Services</p><h1>Service de Traduction Technique</h1><p>Traduction de manuels d'instructions, appels d'offres et spécifications techniques du secteur industriel.</p></div></div>
+    <div class="svc-intro">
+      <div class="si-img reveal"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&q=80" alt="Traductions Techniques" loading="lazy"/></div>
+      <div class="si-text reveal">
+        <h2 class="faq-q">Qu'est-ce qu'une traduction technique ?</h2>
+        <p class="faq-a">Les traductions techniques consistent à convertir des textes traitant de sujets spécialisés en technologie ou ingénierie d'une langue à une autre. Ces textes comprennent généralement des manuels techniques, des articles de recherche, des spécifications de produits, des rapports techniques, des brevets et d'autres contenus hautement spécialisés.<br/><br/>La traduction technique va au-delà de la simple conversion de mots ; elle implique la transmission claire de concepts complexes et de terminologie spécifique à un domaine particulier. Avec plus de 30 ans d'expérience en étroite collaboration avec des fabricants de machines industrielles, je garantis des traductions techniques de la plus haute qualité.</p>
+        <div class="lang-badges"><div class="lang-badge"><span class="lang-badge-dot"></span>Néerlandais</div><div class="lang-badge"><span class="lang-badge-dot"></span>Français</div><div class="lang-badge"><span class="lang-badge-dot"></span>Catalan</div><div class="lang-badge"><span class="lang-badge-dot"></span>Espagnol</div><div class="lang-badge"><span class="lang-badge-dot"></span>Anglais</div></div>
+      </div>
+    </div>
+    <div class="faq-block"><div class="faq-inner reveal"><h2 class="faq-q">À quoi servent les traductions techniques ?</h2><p class="faq-a">Les traductions techniques permettent à des personnes, entreprises ou entités parlant des langues différentes de comprendre et d'échanger des informations spécialisées. Elles permettent la diffusion et l'accès aux connaissances technologiques dans des contextes internationaux, contribuant ainsi à l'introduction de nouvelles avancées technologiques et à la bonne application des normes et pratiques techniques dans des environnements linguistiques différents.</p></div></div>
+    <div class="faq-block" style="background:var(--blue-tint)"><div class="faq-inner reveal"><h2 class="faq-q">Combien coûte une traduction technique ?</h2><p class="faq-a">Le prix peut varier selon la complexité des termes techniques, le volume du document, le délai urgent et la paire de langues. La nature complexe de la terminologie technique peut augmenter le temps et les ressources nécessaires. Contactez-moi pour obtenir un devis détaillé.</p></div></div>
+    <ContactForm lang="fr"/>
+  </main>
+  <Footer lang="fr"/>
+</Layout>
+<style>.svc-intro{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}.si-img{overflow:hidden;max-height:520px}.si-img img{width:100%;height:100%;object-fit:cover}.si-text{padding:4rem;display:flex;flex-direction:column;justify-content:center}.faq-inner{max-width:820px}@media(max-width:900px){.svc-intro{grid-template-columns:1fr}.si-img{max-height:280px}.si-text{padding:3rem 1.5rem}.faq-block{padding:3rem 1.5rem}}</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

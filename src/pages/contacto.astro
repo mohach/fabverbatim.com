@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout lang="es" title="Contacto — Fab Verbatim" description="Contacta con Fabienne Annys para solicitar presupuesto de traducción jurada, jurídica, técnica o económico-financiera.">
+  <Nav lang="es" currentPage="contact"/>
+  <main>
+    <div class="page-hero">
+      <div class="page-hero-inner reveal">
+        <p class="eyebrow eyebrow--light">Contacto</p>
+        <h1>Solicita más información</h1>
+        <p>Si tienes alguna pregunta o necesitas un presupuesto, no dudes en contactarme. Responderé con la mayor brevedad posible.</p>
+      </div>
+    </div>
+    <ContactForm lang="es"/>
+  </main>
+  <Footer lang="es"/>
+</Layout>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 60);
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

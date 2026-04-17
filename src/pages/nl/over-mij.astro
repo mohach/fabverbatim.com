@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="nl" title="Over mij — Fab Verbatim">
+  <Nav lang="nl" currentPage="about"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Fab Verbatim</p><h1>Beëdigd vertaler en technisch vertaler — Spaans · Catalaans · Engels · Nederlands · Frans</h1><p>Gepassioneerd door talen sinds mijn jeugd, met meer dan 30 jaar ervaring en accreditatie in drie landen.</p></div></div>
+    <section class="ab-section">
+      <div class="ab-img reveal"><img src="/fabienne.png" alt="Fabienne Annys"/></div>
+      <div class="ab-text reveal">
+        <p class="eyebrow">Mijn verhaal</p>
+        <h2 class="section-title">FAB VERBATIM</h2>
+        <p style="font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem;">Talen zijn al mijn grote passie sinds mijn jeugd, wat mij heeft gedreven om de wereld te verkennen en me te verdiepen in verschillende culturen. Via deze passie werd ik beëdigd vertaler. Vandaag, met meer dan 30 jaar ervaring en accreditatie in België, Spanje en Nederland voor vijf talen, draag ik de belangrijke verantwoordelijkheid om de nauwkeurigheid en consistentie van elke vertaling die ik produceer te garanderen.</p>
+        <p style="font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem;">Ik ben beëdigd vertaler en tolk, geregistreerd in het register van beëdigde vertalers in België, Spanje en Nederland. Ik verzorg officiële vertalingen van documenten met legalisatie en apostille in het Spaans, Engels, Frans, Nederlands en Catalaans.</p>
+        <a href="/nl/contact" class="btn-primary" style="margin-top:1.5rem">Offerte aanvragen →</a>
+      </div>
+    </section>
+    <ContactForm lang="nl"/>
+  </main>
+  <Footer lang="nl"/>
+</Layout>
+<style>
+  .ab-section { display:grid; grid-template-columns:1fr 1.4fr; background:var(--white); }
+  .ab-img { padding:5rem 3rem 5rem 4rem; background:var(--cream); border-right:1px solid var(--border); }
+  .ab-img img { width:100%; max-width:280px; aspect-ratio:1/1; object-fit:cover; object-position:top center; border:3px solid var(--gold); }
+  .ab-text { padding:5rem 4rem; }
+  @media(max-width:900px) { .ab-section { grid-template-columns:1fr; } .ab-img { padding:4rem 1.5rem 3rem; border-right:none; border-bottom:1px solid var(--border); } .ab-text { padding:3rem 1.5rem; } }
+</style>
+<script>const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*60); }); }, {threshold:0.07}); document.querySelectorAll('.reveal').forEach(el => obs.observe(el));</script>

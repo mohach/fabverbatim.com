@@ -1,0 +1,420 @@
+---
+export interface Props {
+  lang: string;
+  currentPage?: string;
+}
+const { lang, currentPage = '' } = Astro.props;
+
+const navData: Record<string, any> = {
+  es: {
+    services: 'Servicios', about: 'Sobre mí', contact: 'Contacto', quote: 'Presupuesto',
+    sworn: 'Traducciones Juradas', legal: 'Traducciones Jurídicas',
+    economic: 'Económico-Financieras', trade: 'Comercio Exterior', technical: 'Traducciones Técnicas',
+    swornUrl: '/traducciones-juradas', legalUrl: '/traducciones-juridicas',
+    econUrl: '/traducciones-economico-financieras', tradeUrl: '/traducciones-comercio-exterior',
+    techUrl: '/traducciones-tecnicas', aboutUrl: '/sobre-mi', contactUrl: '/contacto',
+  },
+  en: {
+    services: 'Services', about: 'About', contact: 'Contact', quote: 'Get Quote',
+    sworn: 'Sworn Translations', legal: 'Legal Translations',
+    economic: 'Economic & Financial', trade: 'Foreign Trade', technical: 'Technical Translations',
+    swornUrl: '/en/sworn-translation', legalUrl: '/en/legal-translations',
+    econUrl: '/en/economic-financial', tradeUrl: '/en/foreign-trade',
+    techUrl: '/en/technical-translations', aboutUrl: '/en/about-me', contactUrl: '/en/contact',
+  },
+  ca: {
+    services: 'Serveis', about: 'Sobre mi', contact: 'Contacte', quote: 'Pressupost',
+    sworn: 'Traduccions Jurades', legal: 'Traduccions Jurídiques',
+    economic: 'Econòmico-Financeres', trade: 'Comerç Exterior', technical: 'Traduccions Tècniques',
+    swornUrl: '/ca/traduccions-jurades', legalUrl: '/ca/traduccions-juridiques',
+    econUrl: '/ca/traduccions-economiques', tradeUrl: '/ca/comerc-exterior',
+    techUrl: '/ca/traduccions-tecniques', aboutUrl: '/ca/sobre-mi', contactUrl: '/ca/contacte',
+  },
+  fr: {
+    services: 'Services', about: 'À propos', contact: 'Contact', quote: 'Devis',
+    sworn: 'Traductions Assermentées', legal: 'Traductions Juridiques',
+    economic: 'Économie & Finance', trade: 'Commerce Extérieur', technical: 'Traductions Techniques',
+    swornUrl: '/fr/traduction-assermentee', legalUrl: '/fr/traductions-juridiques',
+    econUrl: '/fr/traduction-economique', tradeUrl: '/fr/commerce-exterieur',
+    techUrl: '/fr/traductions-techniques', aboutUrl: '/fr/sur-moi', contactUrl: '/fr/contact',
+  },
+  nl: {
+    services: 'Diensten', about: 'Over mij', contact: 'Contact', quote: 'Offerte',
+    sworn: 'Beëdigde Vertalingen', legal: 'Juridische Vertalingen',
+    economic: 'Economisch & Financieel', trade: 'Buitenlandse Handel', technical: 'Technische Vertalingen',
+    swornUrl: '/nl/beedigde-vertalingen', legalUrl: '/nl/juridische-vertalingen',
+    econUrl: '/nl/economische-vertalingen', tradeUrl: '/nl/buitenlandse-handel',
+    techUrl: '/nl/technische-vertalingen', aboutUrl: '/nl/over-mij', contactUrl: '/nl/contact',
+  },
+};
+
+const n = navData[lang] || navData['es'];
+
+const langLinks = [
+  { code: 'es', label: 'ES', href: '/' },
+  { code: 'en', label: 'EN', href: '/en' },
+  { code: 'ca', label: 'CA', href: '/ca' },
+  { code: 'fr', label: 'FR', href: '/fr' },
+  { code: 'nl', label: 'NL', href: '/nl' },
+];
+---
+
+<nav id="main-nav">
+  <a href={lang === 'es' ? '/' : `/${lang}`} class="nav-logo" aria-label="Fab Verbatim">
+    <img src="/logo-fab.png" alt="Fab Verbatim" class="nav-logo-img"/>
+  </a>
+
+  <!-- Desktop nav -->
+  <ul class="nav-links" id="nav-links">
+    <li class="has-dropdown">
+      <button class="nav-btn" aria-haspopup="true">
+        {n.services}
+        <svg class="chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <ul class="dropdown">
+        <li><a href={n.swornUrl}>{n.sworn}</a></li>
+        <li><a href={n.legalUrl}>{n.legal}</a></li>
+        <li><a href={n.econUrl}>{n.economic}</a></li>
+        <li><a href={n.tradeUrl}>{n.trade}</a></li>
+        <li><a href={n.techUrl}>{n.technical}</a></li>
+      </ul>
+    </li>
+    <li><a href={n.aboutUrl} class:list={[{ active: currentPage === 'about' }]}>{n.about}</a></li>
+    <li><a href={n.contactUrl} class:list={[{ active: currentPage === 'contact' }]}>{n.contact}</a></li>
+    <li class="lang-switcher">
+      {langLinks.map(l => (
+        <a href={l.href} class:list={['lang-opt', { active: l.code === lang }]} hreflang={l.code}>{l.label}</a>
+      ))}
+    </li>
+    <li><a href={n.contactUrl} class="nav-cta">{n.quote}</a></li>
+  </ul>
+
+  <!-- Hamburger -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mob-drawer" id="mob-drawer" aria-hidden="true">
+  <div class="mob-drawer-inner">
+    <div class="mob-drawer-header">
+      <img src="/logo-fab.png" alt="Fab Verbatim" class="mob-logo"/>
+      <button class="mob-close" id="mob-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mob-drawer-body">
+      <!-- Lang switcher top -->
+      <div class="mob-langs">
+        {langLinks.map(l => (
+          <a href={l.href} class:list={['mob-lang', { active: l.code === lang }]} hreflang={l.code}>{l.label}</a>
+        ))}
+      </div>
+
+      <!-- Nav items -->
+      <nav class="mob-nav" aria-label="Mobile navigation">
+        <a href={n.aboutUrl} class="mob-link">{n.about}</a>
+
+        <!-- Services accordion -->
+        <div class="mob-accordion">
+          <button class="mob-accordion-btn" id="mob-svc-btn" aria-expanded="false">
+            {n.services}
+            <svg class="mob-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="mob-accordion-body" id="mob-svc-body">
+            <a href={n.swornUrl} class="mob-sub-link">{n.sworn}</a>
+            <a href={n.legalUrl} class="mob-sub-link">{n.legal}</a>
+            <a href={n.econUrl} class="mob-sub-link">{n.economic}</a>
+            <a href={n.tradeUrl} class="mob-sub-link">{n.trade}</a>
+            <a href={n.techUrl} class="mob-sub-link">{n.technical}</a>
+          </div>
+        </div>
+
+        <a href={n.contactUrl} class="mob-link">{n.contact}</a>
+      </nav>
+
+      <a href={n.contactUrl} class="mob-cta">{n.quote} →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Backdrop -->
+<div class="mob-backdrop" id="mob-backdrop"></div>
+
+<style>
+  /* ── DESKTOP NAV ── */
+  #main-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem;
+    background: rgba(250,248,244,0.97);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+  #main-nav.scrolled { box-shadow: 0 2px 28px rgba(13,28,82,0.1); }
+
+  .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
+  .nav-logo-img { height: 42px; width: auto; object-fit: contain; }
+
+  .nav-links { display: flex; align-items: center; gap: 0.1rem; list-style: none; }
+  .nav-links > li { position: relative; }
+
+  .nav-links a, .nav-btn {
+    font-size: 0.76rem; font-weight: 500; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--navy);
+    padding: 0.4rem 0.65rem; transition: color 0.2s;
+    background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; gap: 0.3rem;
+    font-family: var(--sans); white-space: nowrap;
+    text-decoration: none;
+  }
+  .nav-links a:hover, .nav-btn:hover, .nav-links a.active { color: var(--gold); }
+
+  .chevron { width: 10px; height: 7px; transition: transform 0.2s; flex-shrink: 0; }
+  .has-dropdown:hover .chevron { transform: rotate(180deg); }
+
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+  }
+  .dropdown {
+    position: absolute; top: calc(100% + 8px); left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: var(--white); min-width: 220px;
+    border: 1px solid var(--border); border-top: 3px solid var(--gold);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.11);
+    opacity: 0; visibility: hidden; transition: all 0.22s ease;
+    z-index: 100; list-style: none;
+  }
+  .dropdown li { border-bottom: 1px solid var(--border); }
+  .dropdown li:last-child { border-bottom: none; }
+  .dropdown a {
+    display: block; padding: 0.7rem 1.1rem;
+    font-size: 0.75rem; font-weight: 400;
+    letter-spacing: 0.04em; text-transform: none;
+    color: var(--navy); transition: background 0.15s, color 0.15s;
+  }
+  .dropdown a:hover { background: var(--blue-tint); color: var(--gold); }
+
+  .lang-switcher {
+    display: flex; align-items: center; gap: 0;
+    padding: 0 0.4rem;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    margin: 0 0.2rem;
+  }
+  .lang-opt {
+    font-size: 0.64rem !important; font-weight: 500 !important;
+    color: var(--muted) !important; padding: 0.2rem 0.28rem !important;
+    letter-spacing: 0.05em !important; border-radius: 3px;
+    text-transform: uppercase; text-decoration: none;
+  }
+  .lang-opt:hover, .lang-opt.active { color: var(--gold) !important; font-weight: 600 !important; }
+
+  .nav-cta {
+    background: var(--navy) !important; color: var(--white) !important;
+    padding: 0.5rem 1rem !important; font-size: 0.7rem !important;
+    letter-spacing: 0.1em !important; border-radius: 2px;
+    transition: background 0.22s !important; white-space: nowrap;
+    text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+
+  /* ── HAMBURGER ── */
+  .hamburger {
+    display: none; flex-direction: column; justify-content: center;
+    gap: 5px; background: none; border: none; cursor: pointer;
+    padding: 6px; width: 36px; height: 36px;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--navy); border-radius: 2px;
+    transition: transform 0.28s, opacity 0.28s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── MOBILE DRAWER ── */
+  .mob-drawer {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: min(320px, 85vw);
+    background: var(--white);
+    z-index: 950;
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+    display: flex; flex-direction: column;
+    box-shadow: -8px 0 40px rgba(0,0,0,0.15);
+    overflow-y: auto;
+  }
+  .mob-drawer.open { transform: translateX(0); }
+
+  .mob-drawer-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--offwhite);
+    position: sticky; top: 0; z-index: 1;
+    flex-shrink: 0;
+  }
+  .mob-logo { height: 36px; width: auto; object-fit: contain; }
+  .mob-close {
+    background: none; border: none; cursor: pointer;
+    color: var(--navy); padding: 4px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 4px; transition: background 0.2s, color 0.2s;
+  }
+  .mob-close:hover { background: var(--blue-tint); color: var(--gold); }
+
+  .mob-drawer-body {
+    padding: 1.2rem 0;
+    display: flex; flex-direction: column;
+    flex: 1;
+  }
+
+  .mob-langs {
+    display: flex; gap: 0.3rem; flex-wrap: wrap;
+    padding: 0.6rem 1.2rem 1rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.5rem;
+  }
+  .mob-lang {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+    padding: 0.3rem 0.55rem; border-radius: 3px;
+    border: 1px solid var(--border);
+    transition: all 0.2s; text-decoration: none;
+  }
+  .mob-lang:hover, .mob-lang.active {
+    color: var(--white); background: var(--navy);
+    border-color: var(--navy);
+  }
+
+  .mob-nav { display: flex; flex-direction: column; }
+
+  .mob-link {
+    display: block;
+    font-size: 1rem; font-weight: 600; color: var(--navy);
+    padding: 0.95rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s, background 0.2s;
+    text-decoration: none; letter-spacing: 0.03em;
+  }
+  .mob-link:hover { color: var(--gold); background: var(--blue-tint); }
+
+  /* Services accordion */
+  .mob-accordion { border-bottom: 1px solid var(--border); }
+  .mob-accordion-btn {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    font-size: 1rem; font-weight: 600; color: var(--navy);
+    padding: 0.95rem 1.4rem;
+    background: none; border: none; cursor: pointer;
+    font-family: var(--sans); letter-spacing: 0.03em;
+    transition: color 0.2s, background 0.2s;
+  }
+  .mob-accordion-btn:hover { color: var(--gold); background: var(--blue-tint); }
+  .mob-accordion-btn[aria-expanded="true"] { color: var(--gold); }
+  .mob-chevron {
+    width: 12px; height: 8px; flex-shrink: 0;
+    transition: transform 0.25s; color: currentColor;
+  }
+  .mob-accordion-btn[aria-expanded="true"] .mob-chevron { transform: rotate(180deg); }
+
+  .mob-accordion-body {
+    display: none; background: var(--blue-tint);
+  }
+  .mob-accordion-body.open { display: flex; flex-direction: column; }
+
+  .mob-sub-link {
+    display: block;
+    font-size: 0.88rem; font-weight: 400; color: var(--navy);
+    padding: 0.75rem 1.4rem 0.75rem 2rem;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s; text-decoration: none;
+  }
+  .mob-sub-link:last-child { border-bottom: none; }
+  .mob-sub-link:hover { color: var(--gold); }
+  .mob-sub-link::before { content: '—'; margin-right: 0.5rem; color: var(--gold); font-size: 0.75rem; }
+
+  .mob-cta {
+    display: block; margin: 1.5rem 1.2rem 0;
+    background: var(--navy); color: var(--white);
+    padding: 1rem 1.5rem; text-align: center;
+    font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    border-radius: 3px; transition: background 0.22s;
+    text-decoration: none;
+  }
+  .mob-cta:hover { background: var(--gold); }
+
+  /* ── BACKDROP ── */
+  .mob-backdrop {
+    position: fixed; inset: 0; z-index: 940;
+    background: rgba(8,18,46,0.55);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.32s;
+    backdrop-filter: blur(2px);
+  }
+  .mob-backdrop.open { opacity: 1; pointer-events: auto; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    #main-nav { padding: 0 1.2rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+</style>
+
+<script>
+  const nav       = document.getElementById('main-nav')!;
+  const hamburger = document.getElementById('hamburger')!;
+  const drawer    = document.getElementById('mob-drawer')!;
+  const backdrop  = document.getElementById('mob-backdrop')!;
+  const closeBtn  = document.getElementById('mob-close')!;
+  const svcBtn    = document.getElementById('mob-svc-btn')!;
+  const svcBody   = document.getElementById('mob-svc-body')!;
+
+  // Scroll shadow
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+
+  function openMenu() {
+    drawer.classList.add('open');
+    backdrop.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer.classList.remove('open');
+    backdrop.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+
+  // Services accordion
+  svcBtn.addEventListener('click', () => {
+    const isOpen = svcBtn.getAttribute('aria-expanded') === 'true';
+    svcBtn.setAttribute('aria-expanded', String(!isOpen));
+    svcBody.classList.toggle('open', !isOpen);
+  });
+
+  // Close on nav link click
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Escape key
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>

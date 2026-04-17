@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="fr" title="Mentions Légales — Fab Verbatim" description="Mentions légales de Fab Verbatim. Informations sur le responsable du site, la propriété intellectuelle et les conditions d'utilisation.">
+  <Nav lang="fr" currentPage=""/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Légal</p><h1>Mentions Légales</h1><p>Loi sur les Services de la Société de l'Information (LSSI)</p></div></div>
+    <section class="legal-body">
+      <div class="legal-inner reveal">
+        <p class="legal-intro">Fabienne Colette Marie Françoise Annys, responsable du site web, met à disposition des utilisateurs le présent document pour se conformer aux obligations de la Loi 34/2002 du 11 juillet relative aux Services de la Société de l'Information et du Commerce Électronique (LSSICE).</p>
+        <div class="legal-section"><h2 class="legal-h2">1. Données identificatives</h2><div class="legal-data-grid"><div class="legal-data-row"><span class="legal-data-label">Dénomination sociale</span><span class="legal-data-val">Fabienne Colette Marie Françoise Annys</span></div><div class="legal-data-row"><span class="legal-data-label">Nom commercial</span><span class="legal-data-val">Fab Verbatim</span></div><div class="legal-data-row"><span class="legal-data-label">NIF</span><span class="legal-data-val">X1233450Y</span></div><div class="legal-data-row"><span class="legal-data-label">Adresse</span><span class="legal-data-val">Carrer Sant Pere nº 7, Sant Climent de Llobregat, 08849 Barcelona, Espagne</span></div><div class="legal-data-row"><span class="legal-data-label">Email</span><span class="legal-data-val"><a href="mailto:contact@fabverbatim.com">contact@fabverbatim.com</a></span></div></div></div>
+        <div class="legal-section"><h2 class="legal-h2">2. Objet</h2><p class="legal-p">Par le biais du Site Web, nous offrons aux Utilisateurs la possibilité d'accéder à des informations sur nos services de traduction.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">3. Propriété industrielle et intellectuelle</h2><p class="legal-p">L'Utilisateur reconnaît et accepte que tous les contenus affichés sur le Site Web sont soumis aux droits de Propriété Intellectuelle et Industrielle, propriété exclusive de l'entreprise ou de tiers. L'Utilisateur s'engage à ne pas reproduire, copier, distribuer ni modifier ces contenus sans autorisation expresse.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">4. Loi applicable et juridiction</h2><p class="legal-p">Les présentes conditions sont régies par la législation espagnole. Tout litige sera soumis aux tribunaux du siège social du Responsable du site web.</p></div>
+      </div>
+    </section>
+  </main>
+  <Footer lang="fr"/>
+</Layout>
+<style>
+  .legal-body{background:var(--white);padding:5rem 4rem}.legal-inner{max-width:820px;margin:0 auto}.legal-intro{font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem}.legal-section{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border)}.legal-h2{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.04em}.legal-p{font-size:0.95rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:0.9rem}.legal-p a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}.legal-data-grid{display:flex;flex-direction:column;border:1px solid var(--border);margin-top:1rem}.legal-data-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--border)}.legal-data-row:last-child{border-bottom:none}.legal-data-label{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);padding:0.85rem 1rem;background:var(--blue-tint);border-right:1px solid var(--border)}.legal-data-val{font-size:0.9rem;font-weight:300;color:#2a2a2a;padding:0.85rem 1rem}.legal-data-val a{color:var(--gold)}
+  @media(max-width:900px){.legal-body{padding:4rem 1.5rem}.legal-data-row{grid-template-columns:1fr}.legal-data-label{border-right:none;border-bottom:1px solid var(--border)}}
+</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

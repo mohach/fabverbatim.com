@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="ca" title="Sobre mi — Fab Verbatim">
+  <Nav lang="ca" currentPage="about"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Fab Verbatim</p><h1>Traductora jurada i tècnica — Espanyol · Català · Anglès · Neerlandès · Francès</h1><p>Apassionada dels idiomes des de petita, amb més de 30 anys d'experiència i acreditació en tres països.</p></div></div>
+    <section class="ab-section">
+      <div class="ab-img reveal"><img src="/fabienne.png" alt="Fabienne Annys"/><div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.6rem;"><div style="font-size:0.82rem;color:var(--navy);">✦ Traductora jurada inscrita a Bèlgica</div><div style="font-size:0.82rem;color:var(--navy);">✦ Traductora jurada inscrita a Espanya</div><div style="font-size:0.82rem;color:var(--navy);">✦ Traductora jurada inscrita als Països Baixos</div></div></div>
+      <div class="ab-text reveal">
+        <p class="eyebrow">La meva història</p>
+        <h2 class="section-title">FAB VERBATIM</h2>
+        <p style="font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem;">Els idiomes han estat la meva gran passió des de petita, cosa que m'ha portat a explorar el món i endinsar-me en diferents cultures. Gràcies a aquesta passió, em vaig convertir en traductora jurada. Avui, amb més de 30 anys d'experiència i amb acreditació a Bèlgica, Espanya i els Països Baixos per a cinc idiomes, assumeixo la important responsabilitat de garantir l'exactitud i coherència de cada traducció que produeixo.</p>
+        <p style="font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem;">Soc traductora jurada i intèrpret, inscrita al registre de traductors jurats de Bèlgica, Espanya i els Països Baixos. Ofereixo traduccions de documents oficials amb legalització i apostil·la.</p>
+        <a href="/ca/contacte" class="btn-primary" style="margin-top:1.5rem">Demanar pressupost →</a>
+      </div>
+    </section>
+    <ContactForm lang="ca"/>
+  </main>
+  <Footer lang="ca"/>
+</Layout>
+<style>
+  .ab-section { display:grid; grid-template-columns:1fr 1.4fr; background:var(--white); }
+  .ab-img { padding:5rem 3rem 5rem 4rem; background:var(--cream); border-right:1px solid var(--border); }
+  .ab-img img { width:100%; max-width:280px; aspect-ratio:1/1; object-fit:cover; object-position:top center; border:3px solid var(--gold); }
+  .ab-text { padding:5rem 4rem; }
+  @media(max-width:900px) { .ab-section { grid-template-columns:1fr; } .ab-img { padding:4rem 1.5rem 3rem; border-right:none; border-bottom:1px solid var(--border); } .ab-text { padding:3rem 1.5rem; } }
+</style>
+<script>const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*60); }); }, {threshold:0.07}); document.querySelectorAll('.reveal').forEach(el => obs.observe(el));</script>

@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="ca" title="Avís Legal — Fab Verbatim" description="Avís legal de Fab Verbatim. Informació sobre el responsable del lloc web, propietat intel·lectual i condicions d'ús.">
+  <Nav lang="ca" currentPage=""/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Legal</p><h1>Avís Legal</h1><p>Llei dels Serveis de la Societat de la Informació (LSSI)</p></div></div>
+    <section class="legal-body">
+      <div class="legal-inner reveal">
+        <p class="legal-intro">Fabienne Colette Marie Françoise Annys, responsable del lloc web, posa a disposició dels usuaris el present document per donar compliment a les obligacions de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i del Comerç Electrònic (LSSICE).</p>
+        <div class="legal-section"><h2 class="legal-h2">1. Dades identificatives</h2><div class="legal-data-grid"><div class="legal-data-row"><span class="legal-data-label">Denominació social</span><span class="legal-data-val">Fabienne Colette Marie Françoise Annys</span></div><div class="legal-data-row"><span class="legal-data-label">Nom comercial</span><span class="legal-data-val">Fab Verbatim</span></div><div class="legal-data-row"><span class="legal-data-label">NIF</span><span class="legal-data-val">X1233450Y</span></div><div class="legal-data-row"><span class="legal-data-label">Domicili</span><span class="legal-data-val">Carrer Sant Pere nº 7, Sant Climent de Llobregat, 08849 Barcelona, Espanya</span></div><div class="legal-data-row"><span class="legal-data-label">Email</span><span class="legal-data-val"><a href="mailto:contact@fabverbatim.com">contact@fabverbatim.com</a></span></div></div></div>
+        <div class="legal-section"><h2 class="legal-h2">2. Objecte</h2><p class="legal-p">A través del Lloc Web, oferim als Usuaris la possibilitat d'accedir a informació sobre els nostres serveis de traducció.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">3. Privacitat i tractament de dades</h2><p class="legal-p">Quan sigui necessari facilitar dades de caràcter personal, els Usuaris en garantiran la veracitat i exactitud. L'empresa tractarà les dades en els termes indicats a la <a href="/ca/politica-de-privacitat">Política de Privacitat</a>.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">4. Propietat industrial i intel·lectual</h2><p class="legal-p">Tots els continguts del lloc web estan subjectes a drets de Propietat Intel·lectual i Industrial propietat exclusiva de l'empresa o de tercers. L'Usuari es compromet a no reproduir, copiar, distribuir ni modificar aquests continguts sense autorització expressa.</p></div>
+        <div class="legal-section"><h2 class="legal-h2">5. Obligacions i responsabilitats de l'usuari</h2><ul class="legal-list"><li>Fer un ús adequat i lícit del lloc web.</li><li>No realitzar activitats il·lícites o contràries a la bona fe.</li><li>No intentar accedir a àrees restringides sense complir les condicions exigides.</li><li>No introduir virus informàtics ni sistemes danyosos.</li></ul></div>
+        <div class="legal-section"><h2 class="legal-h2">6. Llei aplicable i jurisdicció</h2><p class="legal-p">Les presents condicions es regeixen per la legislació espanyola. Qualsevol controvèrsia se sotmetrà als Jutjats i Tribunals del domicili social del Responsable del lloc web.</p></div>
+      </div>
+    </section>
+  </main>
+  <Footer lang="ca"/>
+</Layout>
+<style>
+  .legal-body{background:var(--white);padding:5rem 4rem}
+  .legal-inner{max-width:820px;margin:0 auto}
+  .legal-intro{font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem}
+  .legal-section{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border)}
+  .legal-h2{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.04em}
+  .legal-p{font-size:0.95rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:0.9rem}
+  .legal-p a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+  .legal-list{margin:0.8rem 0 0.8rem 1.5rem;display:flex;flex-direction:column;gap:0.6rem}
+  .legal-list li{font-size:0.95rem;font-weight:300;color:#2a2a2a;line-height:1.8}
+  .legal-data-grid{display:flex;flex-direction:column;border:1px solid var(--border);margin-top:1rem}
+  .legal-data-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--border)}
+  .legal-data-row:last-child{border-bottom:none}
+  .legal-data-label{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);padding:0.85rem 1rem;background:var(--blue-tint);border-right:1px solid var(--border)}
+  .legal-data-val{font-size:0.9rem;font-weight:300;color:#2a2a2a;padding:0.85rem 1rem}
+  .legal-data-val a{color:var(--gold)}
+  @media(max-width:900px){.legal-body{padding:4rem 1.5rem}.legal-data-row{grid-template-columns:1fr}.legal-data-label{border-right:none;border-bottom:1px solid var(--border)}}
+</style>
+<script>const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),i*60)});},{threshold:0.07});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));</script>

@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Layout lang="fr" title="À propos — Fab Verbatim">
+  <Nav lang="fr" currentPage="about"/>
+  <main>
+    <div class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow eyebrow--light">Fab Verbatim</p><h1>Traductrice assermentée et technique — Espagnol · Catalan · Anglais · Néerlandais · Français</h1><p>Passionnée par les langues depuis l'enfance, avec plus de 30 ans d'expérience et une accréditation dans trois pays.</p></div></div>
+    <section class="ab-section">
+      <div class="ab-img reveal"><img src="/fabienne.png" alt="Fabienne Annys"/></div>
+      <div class="ab-text reveal">
+        <p class="eyebrow">Mon histoire</p>
+        <h2 class="section-title">FAB VERBATIM</h2>
+        <p style="font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem;">Les langues ont toujours été ma grande passion depuis l'enfance, ce qui m'a poussée à explorer le monde et à me plonger dans différentes cultures. C'est grâce à cette passion que je suis devenue traductrice assermentée. Aujourd'hui, avec plus de 30 ans d'expérience et une accréditation en Belgique, Espagne et aux Pays-Bas pour cinq langues, j'assume l'importante responsabilité de garantir l'exactitude et la cohérence de chaque traduction que je produis.</p>
+        <p style="font-size:0.97rem;font-weight:300;color:#2a2a2a;line-height:1.9;margin-bottom:1.2rem;">Je suis traductrice assermentée et interprète, inscrite au registre des traducteurs assermentés en Belgique, Espagne et aux Pays-Bas. Je fournis des traductions officielles de documents avec légalisation et apostille en espagnol, anglais, français, néerlandais et catalan.</p>
+        <a href="/fr/contact" class="btn-primary" style="margin-top:1.5rem">Demander un devis →</a>
+      </div>
+    </section>
+    <ContactForm lang="fr"/>
+  </main>
+  <Footer lang="fr"/>
+</Layout>
+<style>
+  .ab-section { display:grid; grid-template-columns:1fr 1.4fr; background:var(--white); }
+  .ab-img { padding:5rem 3rem 5rem 4rem; background:var(--cream); border-right:1px solid var(--border); }
+  .ab-img img { width:100%; max-width:280px; aspect-ratio:1/1; object-fit:cover; object-position:top center; border:3px solid var(--gold); }
+  .ab-text { padding:5rem 4rem; }
+  @media(max-width:900px) { .ab-section { grid-template-columns:1fr; } .ab-img { padding:4rem 1.5rem 3rem; border-right:none; border-bottom:1px solid var(--border); } .ab-text { padding:3rem 1.5rem; } }
+</style>
+<script>const obs = new IntersectionObserver((entries) => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*60); }); }, {threshold:0.07}); document.querySelectorAll('.reveal').forEach(el => obs.observe(el));</script>
